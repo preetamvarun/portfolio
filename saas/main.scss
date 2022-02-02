@@ -1,3 +1,29 @@
+// declare variables here 
+
+$primaryColor : #fff;
+$dark : #000;
+$testColor1 : red;
+$testColor2 : green;
+$webmaincolor : #DC143C;
+$font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+// declare a map having several font-weights
+
+$font-weights : (
+    'normal' : 400px,
+    'semi-bold' : 700px,
+    'bold' : 900
+);
+
+// create mixins 
+@mixin flex($fd,$jc,$ac) {
+    display : flex;
+    flex-direction : $fd;
+    // align-items : center;
+    align-items : $ac;
+    justify-content : $jc;
+}
+
 *,*::after,*::before{
     margin : 0;
     padding : 0;
@@ -5,9 +31,50 @@
 }
 
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font-family;
 }
 
 .nav{
-    background-color: red;
+    position: relative;
+    height : 100vh;
+    color : $primaryColor;
+    background: url('/images/banner.jpg') no-repeat center center/cover;
+    @include flex(row, space-between,flex-start);
+    h1{
+        padding : 1.2rem;
+        margin-left : 1.2rem;
+        z-index: 1;
+    }
+    #{&}__x{
+        color : $webmaincolor;
+    }
+    #{&}__menu{
+        margin-right : 1.5rem;
+        z-index: 1;
+        ul{
+            list-style: none;
+            @include flex(row,space-between,center);
+            padding : 1rem;
+            li{
+                margin : .5rem;
+                font-weight: map-get($map: $font-weights, $key: 'bold');
+                transition: all 1s ease;
+                font-size : 1.08rem;
+            }
+            li:hover{
+                cursor: pointer;
+                color : $webmaincolor;
+            }
+        }
+    }
+}
+
+.nav::after{
+    position: absolute;
+    content : '';
+    background-color: rgba(0,0,0,.4);
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right : 0;
 }
