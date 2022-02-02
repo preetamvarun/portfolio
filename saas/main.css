@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav {
+  background-color: red;
+}
+/*# sourceMappingURL=main.css.map */
