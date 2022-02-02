@@ -41,8 +41,8 @@ body{
     background: url('/images/banner.jpg') no-repeat center center/cover;
     @include flex(row, space-between,flex-start);
     h1{
-        padding : 1.2rem;
-        margin-left : 1.2rem;
+        padding : 1.5rem;
+        margin-left : 1.5rem;
         z-index: 1;
     }
     #{&}__x{
@@ -54,16 +54,36 @@ body{
         ul{
             list-style: none;
             @include flex(row,space-between,center);
-            padding : 1rem;
+            padding : 1.5rem;
             li{
-                margin : .5rem;
                 font-weight: map-get($map: $font-weights, $key: 'bold');
                 transition: all 1s ease;
                 font-size : 1.08rem;
-            }
-            li:hover{
-                cursor: pointer;
-                color : $webmaincolor;
+                a{
+                    text-decoration: none;
+                    color : $primaryColor;
+                    display: inline-block;
+                    padding : .5rem;
+                    transition : all .5s ease;
+                    position: relative;
+                    background-color: rgba(255, 237, 71, 0.158);
+                    margin : 0rem .1rem;
+                    .dot{
+                        background-color: $webmaincolor;
+                        position: absolute;
+                        height : 5px;
+                        width : 5px;
+                        border-radius: 10px;
+                        left : 0;
+                        bottom : 0;
+                    }
+                    .dot:hover{
+                        
+                    }
+                }
+                a:hover{
+                    color : $webmaincolor;
+                }
             }
         }
     }
