@@ -24,6 +24,19 @@ $font-weights : (
     justify-content : $jc;
 }
 
+// create a dot mixin 
+
+@mixin dot(){
+    background-color: $webmaincolor;
+    position: absolute;
+    height : 5px;
+    width : 5px;
+    border-radius: 10px;
+    bottom : 0;
+    opacity: 0;
+    transition: all .5s ease
+}
+
 *,*::after,*::before{
     margin : 0;
     padding : 0;
@@ -39,11 +52,16 @@ body{
     height : 100vh;
     color : $primaryColor;
     background: url('/images/banner.jpg') no-repeat center center/cover;
-    @include flex(row, space-between,flex-start);
-    h1{
-        padding : 1.5rem;
-        margin-left : 1.5rem;
+    #{&}__fixed{
+        @include flex(row,space-between,flex-start);
+        position: fixed;
+        width: 100vw;
         z-index: 1;
+        h1{
+            padding : 1.5rem;
+            margin-left : 1.5rem;
+            z-index: 1;
+        }
     }
     #{&}__x{
         color : $webmaincolor;
@@ -66,23 +84,43 @@ body{
                     padding : .5rem;
                     transition : all .5s ease;
                     position: relative;
-                    background-color: rgba(255, 237, 71, 0.158);
+                    // background-color: rgba(255, 237, 71, 0.158);
                     margin : 0rem .1rem;
                     .dot{
-                        background-color: $webmaincolor;
-                        position: absolute;
-                        height : 5px;
-                        width : 5px;
-                        border-radius: 10px;
-                        left : 0;
-                        bottom : 0;
+                        @include dot();
+                        left : 0%;
                     }
-                    .dot:hover{
-                        
-                    }
+                }
+                a::after,a::before{
+                    @include dot();
+                    content: '';
+                }
+                a::after{
+                    left : 0%;
+                }
+                a::before{
+                    left : 0%;
                 }
                 a:hover{
                     color : $webmaincolor;
+                }
+                a:hover::before{
+                    left : 35%;
+                    transform: translateX(-50%);
+                    opacity: 1;
+                    transition-delay: .65s;
+                }
+                a:hover .dot{
+                    left : 50%;
+                    transform: translateX(-50%);
+                    opacity: 1;
+                    transition-delay: .45s;
+                }
+                a:hover::after{
+                    opacity: 1;
+                    left : 65%;
+                    transform: translateX(-50%);
+                    transition-delay: .2s;
                 }
             }
         }
