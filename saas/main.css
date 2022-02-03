@@ -158,7 +158,7 @@ body {
 .nav::after {
   position: absolute;
   content: '';
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
   bottom: 0;
@@ -403,66 +403,46 @@ body {
           align-items: center;
 }
 
-.projects .projects__second .firstp, .projects .projects__second .secondp, .projects .projects__second .thirdp {
+.projects .projects__second .firstp {
   height: 280px;
   width: 360px;
-}
-
-.projects .projects__second .firstp {
-  background-color: red;
+  margin: .5rem;
   position: relative;
-}
-
-.projects .projects__second .firstp img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.projects .projects__second .firstp img:hover {
-  cursor: pointer;
-}
-
-.projects .projects__second .firstp img::after {
-  position: absolute;
-  content: '';
-  background-color: rgba(0, 0, 0, 0.2);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  background: url("../images/ml.jpg") no-repeat center center/cover;
 }
 
 .projects .projects__second .secondp {
-  background-color: green;
+  height: 280px;
+  width: 360px;
+  margin: .5rem;
   position: relative;
-}
-
-.projects .projects__second .secondp img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.projects .projects__second .secondp img:hover {
-  cursor: pointer;
+  background: url("../images/angular.jpg") no-repeat center center/cover;
 }
 
 .projects .projects__second .thirdp {
-  background-color: blue;
+  height: 280px;
+  width: 360px;
+  margin: .5rem;
   position: relative;
+  background: url("../images/python.jpg") no-repeat center center/cover;
 }
 
-.projects .projects__second .thirdp img {
+.projects .projects__second .firstp:hover::after, .projects .projects__second .secondp:hover::after, .projects .projects__second .thirdp:hover::after {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.projects .projects__second .thirdp img:hover {
-  cursor: pointer;
+.projects .projects__second #fcontent {
+  z-index: 2;
+  background: green;
+}
+
+.projects .projects__second #scontent {
+  background: blue;
 }
 /*# sourceMappingURL=main.css.map */

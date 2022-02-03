@@ -256,45 +256,37 @@ body{
     }
     #{&}__second{
         @include flex(row,space-evenly,center);
-        .firstp, .secondp, .thirdp{
-            height : 280px;
-            width : 360px;
-        }
         .firstp{
-            background-color: $testColor1;
-            position: relative;
-            img{
-                @include projectimg();
-                position: relative;
-            }
-            img:hover{
-                cursor: pointer;
-            }
-            img::after{
-                @include overlay();
-            }
+            @include projectimg('../images/ml.jpg');
         }
         .secondp{
-            background-color: $testColor2;
-            position: relative;
-            img{
-                @include projectimg();
-                position: relative;
-            }
-            img:hover{
-                cursor : pointer;
-            }
+            @include projectimg('../images/angular.jpg');
         }
         .thirdp{
-            background-color: $testColor3;
-            position: relative;
-            img{
-                @include projectimg();
-                position: relative;
-            }
-            img:hover{
-                cursor: pointer;
-            }
+            @include projectimg('../images/python.jpg');
         }
+        .firstp:hover::after,.secondp:hover::after,.thirdp:hover::after{
+            position: absolute;
+            content: "";
+            top : 0;
+            left : 0;
+            right : 0;
+            bottom : 0;
+            background-color: rgba(0,0,0,.4);
+        }
+
+        #fcontent{
+            z-index : 2;
+            background: green;
+        }
+
+        #scontent{
+            background: $testColor3;
+        }
+
+        #tcontent{
+
+        }
+
     }
 }
