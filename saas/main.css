@@ -256,10 +256,35 @@ body {
   margin-bottom: .45rem;
 }
 
+.about .about__first h2 {
+  color: #DC143C;
+  position: relative;
+}
+
+.about .about__first h2::before, .about .about__first h2::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 4%;
+  top: 50%;
+  background-color: yellow;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.about .about__first h2::before {
+  left: 41%;
+}
+
+.about .about__first h2::after {
+  right: 41%;
+}
+
 .about .about__second img {
   height: 400px;
   width: 400px;
-  padding: 2rem;
+  padding: 1rem;
+  border-radius: 10%;
 }
 
 .about .about__third {
@@ -281,6 +306,10 @@ body {
   padding: 1rem;
 }
 
+.about .about__third .third_content span {
+  color: #DC143C;
+}
+
 .about .about__third .third_content p {
   padding-left: 1rem;
   padding-right: 4rem;
@@ -294,7 +323,7 @@ body {
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background-color: #9b0422;
+  background-color: red;
   padding: 1rem;
   margin: 1rem;
   border-radius: 5px;
