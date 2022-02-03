@@ -1,0 +1,36 @@
+// create mixins 
+@mixin flex($fd,$jc,$ac) {
+    display : flex;
+    flex-direction : $fd;
+    // align-items : center;
+    align-items : $ac;
+    justify-content : $jc;
+}
+
+// create a dot mixin 
+
+@mixin dot(){
+    background-color: $webmaincolor;
+    position: absolute;
+    height : 5px;
+    width : 5px;
+    border-radius: 10px;
+    bottom : 0;
+    opacity: 0;
+    transition: all .5s ease
+}
+
+// psuedo child mixin (a mixin for styling psuedo elements in the resume button to get the shutter effect)
+@mixin resumebtn(){
+    position: absolute;
+    content: '';
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    background-color: $webmaincolor;
+    border-radius: 5px;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: all .75s ease-in;
+}

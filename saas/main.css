@@ -37,8 +37,8 @@ body {
 
 .nav .nav__fixed h1 {
   padding: 1.5rem;
-  margin-left: 1.5rem;
-  z-index: 1;
+  padding-left: 0rem;
+  margin-left: 3rem;
 }
 
 .nav .nav__x {
@@ -47,7 +47,6 @@ body {
 
 .nav .nav__menu {
   margin-right: 1.5rem;
-  z-index: 1;
 }
 
 .nav .nav__menu ul {
@@ -151,6 +150,14 @@ body {
           transition-delay: .2s;
 }
 
+.nav .nav__intro {
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 3.5%;
+  z-index: 1;
+}
+
 .nav::after {
   position: absolute;
   content: '';
@@ -159,5 +166,75 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+#intro {
+  font-size: 2rem;
+}
+
+#name {
+  font-size: 3.6rem;
+  font-weight: 900;
+  margin: .6rem 0rem;
+}
+
+#skill {
+  font-size: 2.7rem;
+}
+
+#skill span {
+  color: #DC143C;
+}
+
+#download {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: .9rem;
+  background-color: #fc06377e;
+  border-radius: 5px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+#download::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #DC143C;
+  border-radius: 5px;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .75s ease-in;
+  transition: all .75s ease-in;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+#download::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #DC143C;
+  border-radius: 5px;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .75s ease-in;
+  transition: all .75s ease-in;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+#download:hover::after, #download:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 /*# sourceMappingURL=main.css.map */

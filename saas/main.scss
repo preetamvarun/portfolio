@@ -1,41 +1,5 @@
-// declare variables here 
-
-$primaryColor : #fff;
-$dark : #000;
-$testColor1 : red;
-$testColor2 : green;
-$webmaincolor : #DC143C;
-$font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-// declare a map having several font-weights
-
-$font-weights : (
-    'normal' : 400px,
-    'semi-bold' : 700px,
-    'bold' : 900
-);
-
-// create mixins 
-@mixin flex($fd,$jc,$ac) {
-    display : flex;
-    flex-direction : $fd;
-    // align-items : center;
-    align-items : $ac;
-    justify-content : $jc;
-}
-
-// create a dot mixin 
-
-@mixin dot(){
-    background-color: $webmaincolor;
-    position: absolute;
-    height : 5px;
-    width : 5px;
-    border-radius: 10px;
-    bottom : 0;
-    opacity: 0;
-    transition: all .5s ease
-}
+@import "mixins";
+@import "variables";
 
 *,*::after,*::before{
     margin : 0;
@@ -59,8 +23,8 @@ body{
         z-index: 1;
         h1{
             padding : 1.5rem;
-            margin-left : 1.5rem;
-            z-index: 1;
+            padding-left : 0rem;
+            margin-left : 3rem;
         }
     }
     #{&}__x{
@@ -68,7 +32,6 @@ body{
     }
     #{&}__menu{
         margin-right : 1.5rem;
-        z-index: 1;
         ul{
             list-style: none;
             @include flex(row,space-between,center);
@@ -125,6 +88,16 @@ body{
             }
         }
     }
+
+    #{&}__intro{
+        display : inline-block;
+        position: absolute;
+        top : 25%;
+        left : 3.5%;
+        z-index: 1;
+    }
+
+    
 }
 
 .nav::after{
@@ -135,4 +108,46 @@ body{
     left : 0;
     bottom : 0;
     right : 0;
+}
+
+// style nav intro paragraph field
+#intro{
+    font-size: 2rem;
+}
+#name{
+    font-size : 3.6rem;
+    font-weight: map-get($map: $font-weights, $key: 'bold');
+    margin : .6rem 0rem;
+}
+#skill{
+    font-size : 2.7rem;
+    span{
+        color : $webmaincolor;
+    }
+}
+
+#download{
+    text-decoration : none;
+    color : $primaryColor;
+    display: inline-block;
+    padding : .9rem;
+    background-color: $lightwebmaincolor;
+    border-radius : 5px;
+    margin-top : 1rem;
+    position: relative;
+}
+
+#download::before{
+    @include resumebtn();
+    transform-origin: left;
+    
+}
+
+#download::after{
+    @include resumebtn();
+    transform-origin: right;
+}
+
+#download:hover::after, #download:hover::before{
+    transform: scaleX(1);
 }

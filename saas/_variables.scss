@@ -1,0 +1,17 @@
+// declare variables here 
+
+$primaryColor : #fff;
+$dark : #000;
+$testColor1 : red;
+$testColor2 : green;
+$webmaincolor : #DC143C;
+$lightwebmaincolor : #fc06377e;
+$font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+// declare a map having several font-weights
+
+$font-weights : (
+    'normal' : 400px,
+    'semi-bold' : 700px,
+    'bold' : 900
+);
