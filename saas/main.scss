@@ -94,14 +94,12 @@ body{
         left : 3.5%;
         z-index: 1;
     }
-
-    
 }
 
 .nav::after{
     position: absolute;
     content : '';
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.4);
     top : 0;
     left : 0;
     bottom : 0;
@@ -267,9 +265,13 @@ body{
             position: relative;
             img{
                 @include projectimg();
+                position: relative;
             }
             img:hover{
                 cursor: pointer;
+            }
+            img::after{
+                @include overlay();
             }
         }
         .secondp{
@@ -277,6 +279,7 @@ body{
             position: relative;
             img{
                 @include projectimg();
+                position: relative;
             }
             img:hover{
                 cursor : pointer;
@@ -287,6 +290,7 @@ body{
             position: relative;
             img{
                 @include projectimg();
+                position: relative;
             }
             img:hover{
                 cursor: pointer;

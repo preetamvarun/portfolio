@@ -417,10 +417,21 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .projects .projects__second .firstp img:hover {
   cursor: pointer;
+}
+
+.projects .projects__second .firstp img::after {
+  position: absolute;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .projects .projects__second .secondp {
@@ -432,6 +443,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .projects .projects__second .secondp img:hover {
@@ -447,6 +459,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .projects .projects__second .thirdp img:hover {
