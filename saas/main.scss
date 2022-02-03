@@ -171,14 +171,7 @@ body{
             position: relative;
         }
         h2::before, h2::after{
-            position: absolute;
-            content: "";
-            height : 3px;
-            width : 4%;
-            top : 50%;
-            background-color: yellow;
-            border-radius : 5px;
-            background-color: $dark;
+            @include horizontaLine($dark);
         }
         h2::before{
             left : 41%;
@@ -240,4 +233,64 @@ body{
 }
 #linkedIn:hover::before{
     transform : scaleY(1);
+}
+
+.projects{
+    background-color: $dark;
+    color : $primaryColor;
+    padding : 3rem;
+    #{&}__first{
+        text-align: center;
+        h3{
+            padding : 1rem;
+            position: relative;
+            color : $webmaincolor;
+        }
+        h3::before, h3::after{
+            @include horizontaLine($primaryColor);
+        }
+        h3::before{
+            left : 37.5%;
+        }
+        h3::after{
+            right : 37.5%;
+        }
+    }
+    #{&}__second{
+        @include flex(row,space-evenly,center);
+        .firstp, .secondp, .thirdp{
+            height : 280px;
+            width : 360px;
+        }
+        .firstp{
+            background-color: $testColor1;
+            position: relative;
+            img{
+                @include projectimg();
+            }
+            img:hover{
+                cursor: pointer;
+            }
+        }
+        .secondp{
+            background-color: $testColor2;
+            position: relative;
+            img{
+                @include projectimg();
+            }
+            img:hover{
+                cursor : pointer;
+            }
+        }
+        .thirdp{
+            background-color: $testColor3;
+            position: relative;
+            img{
+                @include projectimg();
+            }
+            img:hover{
+                cursor: pointer;
+            }
+        }
+    }
 }

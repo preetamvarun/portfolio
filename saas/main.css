@@ -24,12 +24,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .nav .nav__fixed h1 {
@@ -57,12 +57,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.5rem;
 }
 
@@ -267,7 +267,6 @@ body {
   height: 3px;
   width: 4%;
   top: 50%;
-  background-color: yellow;
   border-radius: 5px;
   background-color: #000;
 }
@@ -352,5 +351,105 @@ body {
 #linkedIn:hover::before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+.projects {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem;
+}
+
+.projects .projects__first {
+  text-align: center;
+}
+
+.projects .projects__first h3 {
+  padding: 1rem;
+  position: relative;
+  color: #DC143C;
+}
+
+.projects .projects__first h3::before, .projects .projects__first h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 4%;
+  top: 50%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.projects .projects__first h3::before {
+  left: 37.5%;
+}
+
+.projects .projects__first h3::after {
+  right: 37.5%;
+}
+
+.projects .projects__second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .projects__second .firstp, .projects .projects__second .secondp, .projects .projects__second .thirdp {
+  height: 280px;
+  width: 360px;
+}
+
+.projects .projects__second .firstp {
+  background-color: red;
+  position: relative;
+}
+
+.projects .projects__second .firstp img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.projects .projects__second .firstp img:hover {
+  cursor: pointer;
+}
+
+.projects .projects__second .secondp {
+  background-color: green;
+  position: relative;
+}
+
+.projects .projects__second .secondp img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.projects .projects__second .secondp img:hover {
+  cursor: pointer;
+}
+
+.projects .projects__second .thirdp {
+  background-color: blue;
+  position: relative;
+}
+
+.projects .projects__second .thirdp img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.projects .projects__second .thirdp img:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

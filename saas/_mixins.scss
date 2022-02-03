@@ -2,9 +2,8 @@
 @mixin flex($fd,$jc,$ac) {
     display : flex;
     flex-direction : $fd;
-    // align-items : center;
-    align-items : $ac;
     justify-content : $jc;
+    align-items : $ac;
 }
 
 // create a dot mixin 
@@ -31,4 +30,22 @@
     border-radius: 5px;
     z-index: -1;
     transition: all 0.75s ease-in;
+}
+
+// include horizontal line mixin 
+@mixin horizontaLine($color){
+        position: absolute;
+        content: "";
+        height : 3px;
+        width : 4%;
+        top : 50%;
+        border-radius : 5px;
+        background-color: $color;
+}
+
+// fit project images
+@mixin projectimg(){
+    position: absolute;
+    height : 100%;
+    width : 100%;
 }
