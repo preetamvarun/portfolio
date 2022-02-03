@@ -70,7 +70,7 @@ body {
   font-weight: 900;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
 
 .nav .nav__menu ul li a {
@@ -353,6 +353,7 @@ body {
           transform: scaleY(1);
 }
 
+/* styling the projects section */
 .projects {
   background-color: #000;
   color: #fff;
@@ -403,46 +404,65 @@ body {
           align-items: center;
 }
 
-.projects .projects__second .firstp {
-  height: 280px;
-  width: 360px;
-  margin: .5rem;
+.projects .projects__ml, .projects .projects__blogspot, .projects .projects__shoppinglist {
   position: relative;
-  background: url("../images/ml.jpg") no-repeat center center/cover;
+  margin: .5rem;
 }
 
-.projects .projects__second .secondp {
-  height: 280px;
-  width: 360px;
-  margin: .5rem;
-  position: relative;
-  background: url("../images/angular.jpg") no-repeat center center/cover;
+.projects .mlImg, .projects .pyImg, .projects .angularImg {
+  height: 350px;
+  width: 350px;
+  display: block;
 }
 
-.projects .projects__second .thirdp {
-  height: 280px;
-  width: 360px;
-  margin: .5rem;
-  position: relative;
-  background: url("../images/python.jpg") no-repeat center center/cover;
-}
-
-.projects .projects__second .firstp:hover::after, .projects .projects__second .secondp:hover::after, .projects .projects__second .thirdp:hover::after {
+.projects .projects__mlContent, .projects .projects__pythonContent, .projects .projects__angularContent {
   position: absolute;
-  content: "";
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  -webkit-transform: translateY(1.5rem);
+          transform: translateY(1.5rem);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.projects .projects__second #fcontent {
-  z-index: 2;
-  background: green;
+.projects .projects__mlContent h1, .projects .projects__pythonContent h1, .projects .projects__angularContent h1 {
+  color: #DC143C;
 }
 
-.projects .projects__second #scontent {
-  background: blue;
+.projects .projects__mlContent .link a, .projects .projects__mlContent i, .projects .projects__pythonContent .link a, .projects .projects__pythonContent i, .projects .projects__angularContent .link a, .projects .projects__angularContent i {
+  text-decoration: none;
+  color: #DC143C;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+}
+
+.projects .projects__mlContent .link:hover a, .projects .projects__mlContent .link:hover i, .projects .projects__pythonContent .link:hover a, .projects .projects__pythonContent .link:hover i, .projects .projects__angularContent .link:hover a, .projects .projects__angularContent .link:hover i {
+  color: #fff;
+}
+
+.projects .projects__mlContent:hover, .projects .projects__pythonContent:hover, .projects .projects__angularContent:hover {
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 1;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

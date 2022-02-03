@@ -39,7 +39,7 @@ body{
             li{
                 font-weight: map-get($map: $font-weights, $key: 'bold');
                 transition: all 1s ease;
-                font-size : 1.08rem;
+                font-size : 1.1rem;
                 a{
                     text-decoration: none;
                     color : $primaryColor;
@@ -233,6 +233,9 @@ body{
     transform : scaleY(1);
 }
 
+
+/* styling the projects section */
+
 .projects{
     background-color: $dark;
     color : $primaryColor;
@@ -254,39 +257,53 @@ body{
             right : 37.5%;
         }
     }
+
     #{&}__second{
         @include flex(row,space-evenly,center);
-        .firstp{
-            @include projectimg('../images/ml.jpg');
-        }
-        .secondp{
-            @include projectimg('../images/angular.jpg');
-        }
-        .thirdp{
-            @include projectimg('../images/python.jpg');
-        }
-        .firstp:hover::after,.secondp:hover::after,.thirdp:hover::after{
-            position: absolute;
-            content: "";
-            top : 0;
-            left : 0;
-            right : 0;
-            bottom : 0;
-            background-color: rgba(0,0,0,.4);
+    }
+
+    .projects__ml,.projects__blogspot,.projects__shoppinglist{
+        position : relative;
+        margin : .5rem;
+    }
+
+    .mlImg,.pyImg,.angularImg{
+        height : 350px;
+        width : 350px;
+        display: block;
+    }
+
+    .projects__mlContent,.projects__pythonContent,.projects__angularContent{
+        position: absolute;
+        top : 0;
+        left : 0;
+        height : 100%;
+        width : 100%;
+        background: rgba(0,0,0,0);
+        opacity: 0;
+        transform: translateY(1.5rem);
+        transition : all .4s ease;
+        @include flex(column,center,center);
+
+        h1{
+            color : $webmaincolor;
         }
 
-        #fcontent{
-            z-index : 2;
-            background: green;
+        .link a,i{
+            text-decoration : none;
+            color : $webmaincolor;
+            display: inline-block;
+            font-size : 1.1rem;
+            margin : 1rem 0rem;
         }
-
-        #scontent{
-            background: $testColor3;
+        .link:hover a, .link:hover i{
+            color : $primaryColor;
         }
-
-        #tcontent{
-
-        }
-
+    }
+    .projects__mlContent:hover, .projects__pythonContent:hover,.projects__angularContent:hover{
+        background: rgba(0,0,0,.75);
+        transform: translateY(0rem);
+        opacity: 1;
+        cursor: pointer;
     }
 }
