@@ -14,7 +14,7 @@ body{
 .nav{
     position: relative;
     height : 100vh;
-    color : $primaryColor;
+    color : $white;
     background: url('/images/banner.jpg') no-repeat center center/cover;
     #{&}__fixed{
         @include flex(row,space-between,flex-start);
@@ -42,7 +42,7 @@ body{
                 font-size : 1.1rem;
                 a{
                     text-decoration: none;
-                    color : $primaryColor;
+                    color : $white;
                     display: inline-block;
                     padding : .5rem;
                     transition : all .5s ease;
@@ -124,7 +124,7 @@ body{
 
 #download{
     text-decoration : none;
-    color : $primaryColor;
+    color : $white;
     display: inline-block;
     padding : 1rem;
     background-color: $lightwebmaincolor1;
@@ -215,7 +215,7 @@ body{
 #linkedIn{
     display: inline-block;
     text-decoration: none;
-    color : $primaryColor;
+    color : $white;
     background-color: red;
     padding : 1rem;
     margin : 1rem;
@@ -238,7 +238,7 @@ body{
 
 .projects{
     background-color: $dark;
-    color : $primaryColor;
+    color : $white;
     padding : 3rem;
     #{&}__first{
         text-align: center;
@@ -248,7 +248,7 @@ body{
             color : $webmaincolor;
         }
         h3::before, h3::after{
-            @include horizontaLine($primaryColor);
+            @include horizontaLine($white);
         }
         h3::before{
             left : 37.5%;
@@ -345,5 +345,92 @@ body{
             line-height: 1.5rem;
         }
     }
+}
 
+/* style educational background tommorow */
+.background{
+    background: $dark;
+    padding : 3rem;
+    #{&}__first{
+        text-align: center;
+        h1{
+            color : $white;
+        }
+        h3{
+            padding : 1rem;
+            position: relative;
+            color : $webmaincolor;
+        }
+        h3::before, h3::after{
+            @include horizontaLine($white);
+        }
+        h3::before{
+            left : 36.5%;
+        }
+        h3::after{
+            right : 36.5%;
+        }
+    }
+}
+
+/* style the remaining section tommorow */
+
+
+/* Now style the contact section */
+.contact{
+    background: $primaryColor;
+    padding : 3rem;
+    #{&}__first{
+        text-align: center;
+        h1{
+            color : $dark;
+        }
+        h3{
+            padding : 1rem;
+            position: relative;
+            color : $webmaincolor;
+        }
+        h3::before, h3::after{
+            @include horizontaLine($dark);
+        }
+        h3::before{
+            left : 40%;
+        }
+        h3::after{
+            right : 40%;
+        }
+    }
+
+    #{&}__second{
+        background: $testColor2;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        .contact__one{
+            background: $testColor1;
+            #touch{
+                padding : 1rem 0rem;
+            }
+            #para{
+                line-height: 1.5rem;
+            }
+            .name__field{
+                background-color: $testColor4;
+            }
+            i{
+                // font-size: 1.5rem;
+                display: inline-block;
+                padding-left : 1rem;
+                // margin-bottom: 2rem;
+            }
+            .name, .address, .email{
+                display: inline-block;
+                padding : 1rem;
+            }
+        }
+
+        .contact__two{
+            background: $testColor2;
+        }
+    }
 }

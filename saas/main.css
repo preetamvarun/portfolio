@@ -12,7 +12,7 @@ body {
 .nav {
   position: relative;
   height: 100vh;
-  color: #f3f3f3f3;
+  color: #fff;
   background: url("/images/banner.jpg") no-repeat center center/cover;
 }
 
@@ -75,7 +75,7 @@ body {
 
 .nav .nav__menu ul li a {
   text-decoration: none;
-  color: #f3f3f3f3;
+  color: #fff;
   display: inline-block;
   padding: .5rem;
   -webkit-transition: all .5s ease;
@@ -185,7 +185,7 @@ body {
 
 #download {
   text-decoration: none;
-  color: #f3f3f3f3;
+  color: #fff;
   display: inline-block;
   padding: 1rem;
   background-color: #fc06377e;
@@ -321,7 +321,7 @@ body {
 #linkedIn {
   display: inline-block;
   text-decoration: none;
-  color: #f3f3f3f3;
+  color: #fff;
   background-color: red;
   padding: 1rem;
   margin: 1rem;
@@ -356,7 +356,7 @@ body {
 /* styling the projects section */
 .projects {
   background-color: #000;
-  color: #f3f3f3f3;
+  color: #fff;
   padding: 3rem;
 }
 
@@ -377,7 +377,7 @@ body {
   width: 4%;
   top: 50%;
   border-radius: 5px;
-  background-color: #f3f3f3f3;
+  background-color: #fff;
 }
 
 .projects .projects__first h3::before {
@@ -455,7 +455,7 @@ body {
 }
 
 .projects .projects__mlContent .link:hover a, .projects .projects__mlContent .link:hover i, .projects .projects__pythonContent .link:hover a, .projects .projects__pythonContent .link:hover i, .projects .projects__angularContent .link:hover a, .projects .projects__angularContent .link:hover i {
-  color: #f3f3f3f3;
+  color: #f3f3f3d5;
 }
 
 .projects .projects__mlContent:hover, .projects .projects__pythonContent:hover, .projects .projects__angularContent:hover {
@@ -468,7 +468,7 @@ body {
 
 /* now start styling skills section */
 .skills {
-  background-color: #f3f3f3f3;
+  background-color: #f3f3f3d5;
   padding: 3rem;
 }
 
@@ -517,5 +517,120 @@ body {
 
 .skills .skills__second p {
   line-height: 1.5rem;
+}
+
+/* style educational background tommorow */
+.background {
+  background: #000;
+  padding: 3rem;
+}
+
+.background .background__first {
+  text-align: center;
+}
+
+.background .background__first h1 {
+  color: #fff;
+}
+
+.background .background__first h3 {
+  padding: 1rem;
+  position: relative;
+  color: #DC143C;
+}
+
+.background .background__first h3::before, .background .background__first h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 4%;
+  top: 50%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.background .background__first h3::before {
+  left: 36.5%;
+}
+
+.background .background__first h3::after {
+  right: 36.5%;
+}
+
+/* style the remaining section tommorow */
+/* Now style the contact section */
+.contact {
+  background: #f3f3f3d5;
+  padding: 3rem;
+}
+
+.contact .contact__first {
+  text-align: center;
+}
+
+.contact .contact__first h1 {
+  color: #000;
+}
+
+.contact .contact__first h3 {
+  padding: 1rem;
+  position: relative;
+  color: #DC143C;
+}
+
+.contact .contact__first h3::before, .contact .contact__first h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 4%;
+  top: 50%;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.contact .contact__first h3::before {
+  left: 40%;
+}
+
+.contact .contact__first h3::after {
+  right: 40%;
+}
+
+.contact .contact__second {
+  background: green;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.contact .contact__second .contact__one {
+  background: red;
+}
+
+.contact .contact__second .contact__one #touch {
+  padding: 1rem 0rem;
+}
+
+.contact .contact__second .contact__one #para {
+  line-height: 1.5rem;
+}
+
+.contact .contact__second .contact__one .name__field {
+  background-color: violet;
+}
+
+.contact .contact__second .contact__one i {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.contact .contact__second .contact__one .name, .contact .contact__second .contact__one .address, .contact .contact__second .contact__one .email {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.contact .contact__second .contact__two {
+  background: green;
 }
 /*# sourceMappingURL=main.css.map */
