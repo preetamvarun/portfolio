@@ -12,7 +12,7 @@ body {
 .nav {
   position: relative;
   height: 100vh;
-  color: #fff;
+  color: #f3f3f3f3;
   background: url("/images/banner.jpg") no-repeat center center/cover;
 }
 
@@ -75,7 +75,7 @@ body {
 
 .nav .nav__menu ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #f3f3f3f3;
   display: inline-block;
   padding: .5rem;
   -webkit-transition: all .5s ease;
@@ -185,7 +185,7 @@ body {
 
 #download {
   text-decoration: none;
-  color: #fff;
+  color: #f3f3f3f3;
   display: inline-block;
   padding: 1rem;
   background-color: #fc06377e;
@@ -321,7 +321,7 @@ body {
 #linkedIn {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: #f3f3f3f3;
   background-color: red;
   padding: 1rem;
   margin: 1rem;
@@ -356,7 +356,7 @@ body {
 /* styling the projects section */
 .projects {
   background-color: #000;
-  color: #fff;
+  color: #f3f3f3f3;
   padding: 3rem;
 }
 
@@ -377,7 +377,7 @@ body {
   width: 4%;
   top: 50%;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #f3f3f3f3;
 }
 
 .projects .projects__first h3::before {
@@ -455,7 +455,7 @@ body {
 }
 
 .projects .projects__mlContent .link:hover a, .projects .projects__mlContent .link:hover i, .projects .projects__pythonContent .link:hover a, .projects .projects__pythonContent .link:hover i, .projects .projects__angularContent .link:hover a, .projects .projects__angularContent .link:hover i {
-  color: #fff;
+  color: #f3f3f3f3;
 }
 
 .projects .projects__mlContent:hover, .projects .projects__pythonContent:hover, .projects .projects__angularContent:hover {
@@ -464,5 +464,58 @@ body {
           transform: translateY(0rem);
   opacity: 1;
   cursor: pointer;
+}
+
+/* now start styling skills section */
+.skills {
+  background-color: #f3f3f3f3;
+  padding: 3rem;
+}
+
+.skills .skills__first {
+  text-align: center;
+}
+
+.skills .skills__first h3 {
+  padding: 1rem;
+  position: relative;
+  color: #DC143C;
+}
+
+.skills .skills__first h3::before, .skills .skills__first h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 4%;
+  top: 50%;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.skills .skills__first h3::before {
+  left: 40.5%;
+}
+
+.skills .skills__first h3::after {
+  right: 40.5%;
+}
+
+.skills .skills__second {
+  padding: 1.5rem 0rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.skills .skills__second h3 {
+  padding: .5rem 0rem;
+  color: #DC143C;
+  font-weight: bold;
+}
+
+.skills .skills__second p {
+  line-height: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */

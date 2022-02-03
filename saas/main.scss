@@ -307,3 +307,43 @@ body{
         cursor: pointer;
     }
 }
+
+/* now start styling skills section */
+
+.skills{
+    background-color: $primaryColor;
+    padding : 3rem;
+    #{&}__first{
+        text-align: center;
+        h3{
+            padding : 1rem;
+            position: relative;
+            color : $webmaincolor;
+        }
+        h3::before, h3::after{
+            @include horizontaLine($dark);
+        }
+        h3::before{
+            left : 40.5%;
+        }
+        h3::after{
+            right : 40.5%;
+        }
+    }
+
+    #{&}__second{
+        padding : 1.5rem 0rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+        h3{
+            padding : .5rem 0rem;
+            color : $webmaincolor;
+            font-weight: bold;
+        }
+        p{
+            line-height: 1.5rem;
+        }
+    }
+
+}
