@@ -647,7 +647,7 @@ body {
   content: '';
   color: white;
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   width: 0;
   height: 0px;
   border-style: solid;
