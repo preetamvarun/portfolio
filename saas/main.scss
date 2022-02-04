@@ -22,7 +22,7 @@ body{
     z-index: 10;
     height : 100vh;
     color : $white;
-    background: url('/images/banner.jpg') no-repeat center center/cover;
+    background: url('/images/banner-2.jpg') no-repeat center center/cover;
     #{&}__fixed{
         @include flex(row,space-between,flex-start);
         // position: fixed;
@@ -116,15 +116,15 @@ body{
 // style nav intro paragraph field
 
 #intro{
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 #name{
-    font-size : 3.6rem;
+    font-size : 3rem;
     font-weight: map-get($map: $font-weights, $key: 'bold');
     margin : .6rem 0rem;
 }
 #skill{
-    font-size : 2.7rem;
+    font-size : 2.2rem;
     span{
         color : $webmaincolor;
     }
