@@ -10,7 +10,10 @@ body {
 }
 
 .nav {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   position: relative;
+  z-index: 10;
   height: 100vh;
   color: #fff;
   background: url("/images/banner.jpg") no-repeat center center/cover;
@@ -238,22 +241,22 @@ body {
 }
 
 .about {
-  display: -ms-grid;
-  display: grid;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  position: relative;
+  z-index: 9;
   text-align: center;
-  -ms-grid-columns: 1fr .7fr 1fr;
-      grid-template-columns: 1fr .7fr 1fr;
+  margin-top: -5vw;
+  height: 100vh;
+  background-color: white;
 }
 
 .about .about__first {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1/ span 4;
-  padding: 2rem;
+  padding-top: 3rem;
 }
 
 .about .about__first h1 {
-  margin-bottom: .45rem;
+  padding: 1rem 0rem;
 }
 
 .about .about__first h2 {
@@ -279,42 +282,45 @@ body {
   right: 41%;
 }
 
-.about .about__second img {
-  height: 400px;
-  width: 400px;
-  padding: 1rem;
-  border-radius: 10%;
+.about .about__flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
 }
 
-.about .about__third {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2/ span 3;
-  position: relative;
+.about .about__flex .third__image img {
+  height: 330px;
+  width: 300px;
+  border-radius: 5%;
+  display: block;
+  margin: 0 auto;
 }
 
-.about .about__third .third_content {
-  position: absolute;
-  top: 30%;
-  -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
-  text-align: left;
+.about .about__flex .third_content {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
-.about .about__third .third_content h2 {
-  padding: 1rem;
-}
-
-.about .about__third .third_content span {
-  color: #DC143C;
-}
-
-.about .about__third .third_content p {
-  padding-left: 1rem;
-  padding-right: 4rem;
+.about .about__flex .third_content p {
   text-align: justify;
   line-height: 1.7rem;
   font-size: 1.2rem;
+  padding: 1rem 4rem 1rem 0rem;
   font-weight: 700px;
 }
 
@@ -322,9 +328,8 @@ body {
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background-color: red;
+  background-color: rgba(3, 2, 2, 0.844);
   padding: 1rem;
-  margin: 1rem;
   border-radius: 5px;
   position: relative;
   z-index: 0;
@@ -355,13 +360,23 @@ body {
 
 /* styling the projects section */
 .projects {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  position: relative;
   background-color: #000;
+  z-index: 8;
+  height: 110vh;
+  margin-top: -5vw;
   color: #fff;
   padding: 3rem;
 }
 
 .projects .projects__first {
   text-align: center;
+}
+
+.projects .projects__first h1 {
+  padding-top: 1.8rem;
 }
 
 .projects .projects__first h3 {
@@ -468,12 +483,22 @@ body {
 
 /* now start styling skills section */
 .skills {
-  background-color: #f3f3f3d5;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  position: relative;
+  background-color: white;
   padding: 3rem;
+  margin-top: -5vw;
+  z-index: 7;
+  height: 95vh;
 }
 
 .skills .skills__first {
   text-align: center;
+}
+
+.skills .skills__first h1 {
+  padding-top: 1rem;
 }
 
 .skills .skills__first h3 {
@@ -501,7 +526,7 @@ body {
 }
 
 .skills .skills__second {
-  padding: 1.5rem 0rem;
+  padding: 1rem 0rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -511,6 +536,7 @@ body {
 
 .skills .skills__second h3 {
   padding: .5rem 0rem;
+  text-align: left;
   color: #DC143C;
   font-weight: bold;
 }
@@ -523,6 +549,8 @@ body {
 .background {
   background: #000;
   padding: 3rem;
+  margin-top: -5vw;
+  overflow-x: hidden;
 }
 
 .background .background__first {
@@ -557,80 +585,93 @@ body {
   right: 36.5%;
 }
 
-/* style the remaining section tommorow */
-/* Now style the contact section */
-.contact {
-  background: #f3f3f3d5;
-  padding: 3rem;
+.background .background__second {
+  color: white;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.contact .contact__first {
-  text-align: center;
-}
-
-.contact .contact__first h1 {
-  color: #000;
-}
-
-.contact .contact__first h3 {
-  padding: 1rem;
+.background .background__second li {
+  list-style: none;
   position: relative;
-  color: #DC143C;
+  width: 4px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #f3f3f3d5;
 }
 
-.contact .contact__first h3::before, .contact .contact__first h3::after {
+.background .background__second li::after {
+  content: '';
   position: absolute;
-  content: "";
-  height: 3px;
-  width: 4%;
-  top: 50%;
-  border-radius: 5px;
-  background-color: #000;
+  height: 15px;
+  width: 15px;
+  background-color: #DC143C;
+  font-weight: bold;
+  z-index: 2;
+  border-radius: 50%;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
-.contact .contact__first h3::before {
-  left: 40%;
-}
-
-.contact .contact__first h3::after {
-  right: 40%;
-}
-
-.contact .contact__second {
-  background: green;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-}
-
-.contact .contact__second .contact__one {
-  background: red;
-}
-
-.contact .contact__second .contact__one #touch {
-  padding: 1rem 0rem;
-}
-
-.contact .contact__second .contact__one #para {
-  line-height: 1.5rem;
-}
-
-.contact .contact__second .contact__one .name__field {
-  background-color: violet;
-}
-
-.contact .contact__second .contact__one i {
-  display: inline-block;
-  padding-left: 1rem;
-}
-
-.contact .contact__second .contact__one .name, .contact .contact__second .contact__one .address, .contact .contact__second .contact__one .email {
-  display: inline-block;
+.background .background__second li div {
+  position: relative;
+  background-color: white;
+  color: black;
+  width: 450px;
   padding: 1rem;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
-.contact .contact__second .contact__two {
-  background: green;
+.background .background__second li div h2 {
+  padding-bottom: .5rem;
+  color: #DC143C;
+  font-size: 1.5rem;
 }
+
+.background .background__second li div h2 i {
+  padding-right: .5rem;
+  font-size: 1rem;
+}
+
+.background .background__second li div p {
+  line-height: 1.5rem;
+  font-size: .9rem;
+}
+
+.background .background__second li div::before {
+  content: '';
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0px;
+  border-style: solid;
+}
+
+.background .background__second li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0px;
+  border-color: transparent white transparent transparent;
+}
+
+.background .background__second li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent white;
+}
+
+.background .background__second li:nth-child(odd) div {
+  left: 35px;
+}
+
+.background .background__second li:nth-child(even) div {
+  left: -485px;
+}
+
+/* style the remaining section tommorow */
 /*# sourceMappingURL=main.css.map */
