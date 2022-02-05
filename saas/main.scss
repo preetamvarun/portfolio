@@ -685,7 +685,56 @@ body{
             height : 3rem;
         }
     }
-
 }
+
+/* Now style the section that is above the footer */
+
+.dark{
+    height : 40vh;
+    background-color: $darkContentBckColor;
+    position: relative;
+
+    #{&}__content{
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%,-50%);
+
+        h1{
+            font-size: 3rem;
+            color : white;
+            span{
+                color : $webmaincolor;
+            }
+        }
+
+        p{
+            text-align: center;
+            margin : 1.5rem 0rem;
+            font-size: 1.1rem;
+            color : white;
+        }
+    }
+
+    #{&}__icons{
+        ul{
+            @include flex(row,space-evenly,center);
+            width : 70%;
+            margin : 0 auto;
+        }
+        ul li{
+            list-style: none;
+            a i{
+                font-size : 1rem;
+                background-color: rgba(0, 0, 0, 0.514);
+                color : white;
+                padding : .6rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
 
 
