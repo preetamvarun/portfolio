@@ -895,4 +895,99 @@ body {
 .contact .contact__first h3::after {
   right: 41.5%;
 }
+
+.contact .contact__second {
+  max-width: 1180px;
+  margin: 0 auto;
+  background-color: cadetblue;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+}
+
+.contact .contact__location, .contact .contact__phn, .contact .contact__email {
+  text-align: center;
+  font-size: 1.15rem;
+  border-radius: 5px;
+  color: #DC143C;
+}
+
+.contact .contact__location i, .contact .contact__phn i, .contact .contact__email i {
+  padding: 1rem 2rem 0rem 2rem;
+}
+
+.contact .contact__location p, .contact .contact__phn p, .contact .contact__email p {
+  color: #000;
+  padding: 1rem 2rem 1rem 2rem;
+  font-weight: 700px;
+}
+
+.contact .contact__submission {
+  background-color: violet;
+}
+
+.contact .contact__personal label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.contact .contact__name, .contact .contact__youremail, .contact .contact__phoneNumber {
+  padding: 1rem;
+}
+
+.contact .contact__name input, .contact .contact__youremail input, .contact .contact__phoneNumber input {
+  height: 2.3rem;
+  width: 100%;
+  position: relative;
+}
+
+.contact .contact__name input::-webkit-input-placeholder, .contact .contact__youremail input::-webkit-input-placeholder, .contact .contact__phoneNumber input::-webkit-input-placeholder {
+  font-style: italic;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contact .contact__name input:-ms-input-placeholder, .contact .contact__youremail input:-ms-input-placeholder, .contact .contact__phoneNumber input:-ms-input-placeholder {
+  font-style: italic;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact .contact__name input::-ms-input-placeholder, .contact .contact__youremail input::-ms-input-placeholder, .contact .contact__phoneNumber input::-ms-input-placeholder {
+  font-style: italic;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact .contact__name input::placeholder, .contact .contact__youremail input::placeholder, .contact .contact__phoneNumber input::placeholder {
+  font-style: italic;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.contact .contact__youremail {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.contact .contact__message {
+  padding: 1rem;
+}
+
+.contact .contact__message label {
+  display: block;
+  margin-bottom: .5rem;
+}
 /*# sourceMappingURL=main.css.map */

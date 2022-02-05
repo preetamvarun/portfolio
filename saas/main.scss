@@ -580,4 +580,74 @@ body{
             right : 41.5%;
         }
     }
+
+    #{&}__second{
+        max-width : 1180px;
+        margin: 0 auto;
+        background-color: cadetblue;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 1rem;
+    }
+
+    #{&}__location, #{&}__phn , #{&}__email{
+        text-align: center;
+        font-size: 1.15rem;
+        border-radius: 5px;
+        color: $webmaincolor;
+        i{
+            padding: 1rem 2rem 0rem 2rem;
+        }
+        p{
+            color : $dark;
+            padding : 1rem 2rem 1rem 2rem;
+            font-weight: map-get($map: $font-weights, $key: 'semi-bold');
+        }
+    }
+
+    #{&}__submission{
+        background-color: $testColor4;
+    }
+
+    #{&}__personal{
+        // background-color: $testColor2;
+        label{
+            display: block;
+            margin-bottom : .5rem;
+        }
+    }
+
+    #{&}__name, #{&}__youremail, #{&}__phoneNumber{
+        padding : 1rem;
+
+        input{
+            height: 2.3rem;
+            width : 100%;
+            position: relative;
+        }
+
+        input::placeholder{
+            font-style: italic;
+            position: absolute;
+            left : 2%;
+            top : 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    #{&}__youremail{
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    #{&}__message{
+        // background-color: $testColor3;
+        padding : 1rem;
+        label{
+            display: block;
+            margin-bottom: .5rem;
+        }
+    }
 }
+
+
