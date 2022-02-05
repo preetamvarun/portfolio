@@ -5,12 +5,9 @@
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -865,5 +862,37 @@ body {
   left: -485px;
 }
 
-/* style the remaining section tommorow */
+/* Now style the contact form */
+.contact .contact__first {
+  text-align: center;
+}
+
+.contact .contact__first h1 {
+  color: #000;
+  margin-top: 1rem;
+}
+
+.contact .contact__first h3 {
+  padding: 1rem;
+  position: relative;
+  color: #DC143C;
+}
+
+.contact .contact__first h3::before, .contact .contact__first h3::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 4%;
+  top: 50%;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.contact .contact__first h3::before {
+  left: 41.5%;
+}
+
+.contact .contact__first h3::after {
+  right: 41.5%;
+}
 /*# sourceMappingURL=main.css.map */

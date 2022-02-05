@@ -7,12 +7,13 @@
     box-sizing : border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+// html{
+//     scroll-behavior: smooth;
+// }
 
 body{
     font-family: $font-family;
+    overflow-x: hidden;
 }
 
 .nav{
@@ -20,6 +21,7 @@ body{
     height : 100vh;
     color : $white;
     background: url('/images/banner-2.jpg') no-repeat center center/cover;
+    
 
     #{&}__navigator{
         @include navigatorOuterBody(white);
@@ -554,5 +556,28 @@ body{
     }
 }
 
-/* style the remaining section tommorow */
+/* Now style the contact form */
 
+.contact{
+    #{&}__first{
+        text-align: center;
+        h1{
+            color : $dark;
+            margin-top : 1rem;
+        }
+        h3{
+            padding : 1rem;
+            position: relative;
+            color : $webmaincolor;
+        }
+        h3::before, h3::after{
+            @include horizontaLine($dark);
+        }
+        h3::before{
+            left : 41.5%;
+        }
+        h3::after{
+            right : 41.5%;
+        }
+    }
+}
