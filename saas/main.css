@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
@@ -1140,11 +1144,17 @@ body {
 }
 
 .dark .dark__icons ul li a i {
-  font-size: 1rem;
+  font-size: 1.08rem;
   background-color: rgba(0, 0, 0, 0.514);
   color: white;
-  padding: .6rem;
+  padding: .7rem;
   border-radius: 50%;
+  -webkit-transition: color .35s ease-in-out;
+  transition: color .35s ease-in-out;
+}
+
+.dark .dark__icons ul li a i:hover {
+  color: #DC143C;
 }
 
 /* Now style the footer section */
