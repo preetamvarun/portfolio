@@ -272,6 +272,7 @@ body{
     transform : scaleY(0);
     transform-origin: top;
 }
+
 #linkedIn:hover::before{
     transform : scaleY(1);
 }
