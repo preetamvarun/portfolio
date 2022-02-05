@@ -735,6 +735,20 @@ body{
     }
 }
 
+/* Now style the footer section */
+.footer{
+    background-color: #191919;
+    height : 13vh;
+    position: relative;
+    p{
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%,-50%);
+        color : rgb(224, 217, 217);
+        font-size: 1.1rem;
+    }
+}
 
 
 
