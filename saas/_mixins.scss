@@ -42,3 +42,30 @@
         border-radius : 5px;
         background-color: $color;
 }
+
+// create a navigator outer body mixin
+
+@mixin navigatorOuterBody($color){
+    height : 50px;
+    width : 30px;
+    border : 2px solid $color;
+    z-index : 999;
+    bottom : 15px;
+    left : 50%;
+    position: absolute;
+    border-radius : 50px;
+}
+
+// include navigator mixin
+@mixin navigatorArrow($topvalue){
+    position: absolute;
+    content: '';
+    height : 10px;
+    width : 10px;
+    border : 2px solid $webmaincolor;
+    top : $topvalue;
+    left : 50%;
+    transform: translate(-50%,-100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+}

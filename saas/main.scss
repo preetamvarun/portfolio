@@ -7,25 +7,54 @@
     box-sizing : border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: $font-family;
 }
 
-// body>div {
-//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
-//     position: relative;
-// }
-
 .nav{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
     position: relative;
-    z-index: 10;
     height : 100vh;
     color : $white;
     background: url('/images/banner-2.jpg') no-repeat center center/cover;
+
+    #{&}__navigator{
+        @include navigatorOuterBody(white);
+    }
+
+    #{&}__navigator::before{
+        @include navigatorArrow(15%);
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    #{&}__navigator::after{
+        @include navigatorArrow(30%);
+        animation: animate 1s .3s ease-in-out infinite;
+    }
+
+    // now add key frames to animate the scroll down button
+    @keyframes animate{
+        0%{
+            opacity: 0;
+        }
+        30%{
+            opacity: 1;
+        }
+        60%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            top : 95%;
+        }
+    }
+
+
     #{&}__fixed{
         @include flex(row,space-between,flex-start);
-        // position: fixed;
         h1{
             padding : 1.5rem;
             padding-left : 0rem;
@@ -163,13 +192,23 @@ body{
 // now style the about section
 
 .about{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
     position: relative;
-    z-index: 9;
     text-align: center;
-    margin-top: -5vw;
     height : 100vh;
     background-color: white;
+    #{&}__navigator{
+        @include navigatorOuterBody($dark);
+    }
+    #{&}__navigator::before{
+        @include navigatorArrow(15%);
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    #{&}__navigator::after{
+        @include navigatorArrow(30%);
+        animation: animate 1s .3s ease-in-out infinite;
+    }
+
     #{&}__first{
         padding-top : 3rem;
         h1{
@@ -219,7 +258,6 @@ body{
     display: inline-block;
     text-decoration: none;
     color : $white;
-    // background-color: rgb(221, 9, 9,1);
     background-color: rgba(3, 2, 2, 0.844);
     padding : 1rem;
     border-radius : 5px;
@@ -240,14 +278,25 @@ body{
 /* styling the projects section */
 
 .projects{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
     position: relative;
     background-color: $dark;
-    z-index: 8;
     height: 110vh;
-    margin-top: -5vw;
     color : $white;
     padding : 3rem;
+
+    #{&}__navigator{
+        @include navigatorOuterBody(white);
+    }
+    #{&}__navigator::before{
+        @include navigatorArrow(15%);
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    #{&}__navigator::after{
+        @include navigatorArrow(30%);
+        animation: animate 1s .3s ease-in-out infinite;
+    }
+
     #{&}__first{
         text-align: center;
         h1{
@@ -322,13 +371,25 @@ body{
 /* now start styling skills section */
 
 .skills{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
     position: relative;
     background-color: white;
     padding : 3rem;
-    margin-top: -5vw;
-    z-index: 7;
     height : 95vh;
+
+    #{&}__navigator{
+        @include navigatorOuterBody($dark);
+    }
+
+    #{&}__navigator::before{
+        @include navigatorArrow(15%);
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    #{&}__navigator::after{
+        @include navigatorArrow(30%);
+        animation: animate 1s .3s ease-in-out infinite;
+    }
+
 
     #{&}__first{
         text-align: center;
@@ -372,8 +433,8 @@ body{
 .background{
     background: $dark;
     padding : 3rem;
-     margin-top: -5vw;
-     overflow-x: hidden;
+    overflow-x: hidden;
+
     #{&}__first{
         text-align: center;
         h1{
@@ -400,6 +461,8 @@ body{
         color : white;
         max-width: 1180px;
         margin : 0 auto;
+
+        
 
         // create line 
         li{
