@@ -260,7 +260,7 @@ body{
     display: inline-block;
     text-decoration: none;
     color : $white;
-    background-color: rgba(3, 2, 2, 0.844);
+    background-color : $lightwebmaincolor2;
     padding : 1rem;
     border-radius : 5px;
     position : relative;
@@ -437,6 +437,23 @@ body{
     background: $dark;
     padding : 3rem;
     overflow-x: hidden;
+    position: relative;
+    height : 210vh;
+
+    #{&}__navigator{
+        @include navigatorOuterBody(white);
+        transform: translateX(-50%);
+    }
+
+    #{&}__navigator::before{
+        @include navigatorArrow(15%);
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    #{&}__navigator::after{
+        @include navigatorArrow(30%);
+        animation: animate 1s .3s ease-in-out infinite;
+    }
 
     #{&}__first{
         text-align: center;
@@ -586,6 +603,7 @@ body{
 
     #{&}__second{
         @include flex(row,space-between,stretch);
+        margin-top: 2rem;
     }
 
     #{&}__mydetails{
@@ -607,6 +625,27 @@ body{
 
     #{&}__iconContent{
         margin: auto 0;
+    }
+
+    #{&}__link{
+        text-decoration: none;
+        background-color : $lightwebmaincolor2;
+        color : white;
+        padding : 1rem;
+        display: inline-block;
+        margin-top : .5rem;
+        position: relative;
+        z-index: 0;
+    }
+
+    #{&}__link::before{
+        @include shutterbtn();
+        transform : scaleY(0);
+        transform-origin: bottom;
+    }
+
+    #{&}__link:hover::before{
+        transform: scaleY(1);
     }
 
     #{&}__iconContent p:first-child{
