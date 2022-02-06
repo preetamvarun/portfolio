@@ -236,10 +236,11 @@ body{
         .third__image{
             img{
                 height : 330px;
-                width : 300px;
-                border-radius: 5%;
+                width : 260px;
+                border-radius: 1%;
                 display: block;
                 margin : 0 auto;
+                box-shadow: 1px 1px 3px rgba(4,4,4,.4);
             }
         }
         .third_content{
@@ -342,10 +343,9 @@ body{
         left : 0;
         height : 100%;
         width : 100%;
-        background: rgba(0,0,0,0);
         opacity: 0;
         transform: translateY(1.5rem);
-        transition : all .4s ease;
+        transition : all .75s .2s ease;
         @include flex(column,center,center);
 
         h1{
@@ -358,6 +358,7 @@ body{
             display: inline-block;
             font-size : 1.1rem;
             margin : 1rem 0rem;
+            transition: color .6s ease-out;
         }
         .link:hover a, .link:hover i{
             color : $primaryColor;

@@ -407,10 +407,12 @@ body {
 
 .about .about__flex .third__image img {
   height: 330px;
-  width: 300px;
-  border-radius: 5%;
+  width: 260px;
+  border-radius: 1%;
   display: block;
   margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 3px rgba(4, 4, 4, 0.4);
+          box-shadow: 1px 1px 3px rgba(4, 4, 4, 0.4);
 }
 
 .about .about__flex .third_content {
@@ -591,12 +593,11 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0);
   opacity: 0;
   -webkit-transform: translateY(1.5rem);
           transform: translateY(1.5rem);
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all .75s .2s ease;
+  transition: all .75s .2s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,6 +623,8 @@ body {
   display: inline-block;
   font-size: 1.1rem;
   margin: 1rem 0rem;
+  -webkit-transition: color .6s ease-out;
+  transition: color .6s ease-out;
 }
 
 .projects .projects__mlContent .link:hover a, .projects .projects__mlContent .link:hover i, .projects .projects__pythonContent .link:hover a, .projects .projects__pythonContent .link:hover i, .projects .projects__angularContent .link:hover a, .projects .projects__angularContent .link:hover i {
