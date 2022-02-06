@@ -13,11 +13,10 @@ let backgroundObserver = new IntersectionObserver(function(entries){
         if(!entry.isIntersecting){
             return;
         } else{
-            console.log(entry.target);
             entry.target.classList.add('backgroundAnimation');
             backgroundObserver.unobserve(entry.target);
         }
-    })
+    });
 },options);
 
 backgroundDivs.forEach((backgroundDiv) => backgroundObserver.observe(backgroundDiv));
