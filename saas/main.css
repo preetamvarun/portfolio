@@ -748,7 +748,7 @@ body {
   padding: 3rem;
   overflow-x: hidden;
   position: relative;
-  height: 210vh;
+  height: 220vh;
 }
 
 .background .background__navigator {
@@ -866,8 +866,6 @@ body {
   color: black;
   width: 450px;
   padding: 1rem;
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
 }
 
 .background .background__second li div h2 {
@@ -884,6 +882,28 @@ body {
 .background .background__second li div p {
   line-height: 1.5rem;
   font-size: .9rem;
+}
+
+.background .background__second li .background__inter, .background .background__second li .background__company1 {
+  opacity: 0;
+  -webkit-transform: rotate(-85deg);
+          transform: rotate(-85deg);
+  -webkit-transition: all .75s ease-in-out;
+  transition: all .75s ease-in-out;
+}
+
+.background .background__second li .background__10, .background .background__second li .background__btech, .background .background__second li .background__company2 {
+  opacity: 0;
+  -webkit-transform: rotate(85deg);
+          transform: rotate(85deg);
+  -webkit-transition: all .75s ease-in-out;
+  transition: all .75s ease-in-out;
+}
+
+.background .background__second li .backgroundAnimation {
+  opacity: 1;
+  -webkit-transform: rotate(0deg) translateY(0px);
+          transform: rotate(0deg) translateY(0px);
 }
 
 .background .background__second li div::before {

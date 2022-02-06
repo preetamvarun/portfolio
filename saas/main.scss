@@ -439,7 +439,9 @@ body{
     padding : 3rem;
     overflow-x: hidden;
     position: relative;
-    height : 210vh;
+    height : 220vh;
+
+    
 
     #{&}__navigator{
         @include navigatorOuterBody(white);
@@ -519,7 +521,6 @@ body{
             color : black;
             width : 450px;
             padding : 1rem;
-            transition: all .5s ease-in;
             h2{
                 padding-bottom: .5rem;
                 color : $webmaincolor;
@@ -533,6 +534,23 @@ body{
                 line-height: 1.5rem;
                 font-size: .9rem;
             }
+        }
+
+        li .background__inter, li .background__company1{
+            opacity : 0;
+            transform: rotate(-85deg);
+            transition: all .75s ease-in-out;
+        }
+
+        li .background__10, li .background__btech, li .background__company2{
+            opacity : 0;
+            transform: rotate(85deg);
+            transition: all .75s ease-in-out;
+        }
+
+        li .backgroundAnimation{
+            opacity : 1;
+            transform: rotate(0deg) translateY(0px);
         }
 
         // BASE STYLING FOR THE ARROW
@@ -550,19 +568,16 @@ body{
         li:nth-child(odd) div::before{
             left : -15px;
             border-width : 8px 16px 8px 0px;
-            border-color : transparent white transparent transparent;
-            // transform: translateX(50%);
+            border-color : transparent white transparent transparent;            
         }
 
         li:nth-child(even) div::before{
             right : -15px;
             border-width : 8px 0px 8px 16px;
-            // transform: translateX(50%);
             border-color : transparent transparent transparent white;
         }
 
         // now target the odd boxes (right ones)
-
         li:nth-child(odd) div{
             left : 35px;
         }
@@ -574,6 +589,7 @@ body{
 
     }
 }
+
 
 /* Now style the contact form */
 
