@@ -821,11 +821,11 @@ body {
 }
 
 .background .background__first h3::before {
-  left: 36.5%;
+  left: 43%;
 }
 
 .background .background__first h3::after {
-  right: 36.5%;
+  right: 43%;
 }
 
 .background .background__second {
