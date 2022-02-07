@@ -73,6 +73,29 @@
 
 /* MEDIA QUERY MIXINS */
 
+@mixin aboutSectionTablets(){
+    .about{
+        #{&}__navigator {left : 40%; bottom : 25px;}
+        #{&}__first{
+            padding-top : 2rem;
+            h2::before {left : 36%;}
+            h2::after {right : 36%;}
+        }
+        #{&}__flex{
+            display: flex; flex-direction: column;
+            .third__image{ img{ margin-top : .75rem; height : 300px; width : 250px; }}
+            .third_content{
+                @include flex(column,center,start);
+                h2{margin : 1rem;}
+                p{margin : 1rem;}
+                p{margin-top : 0rem;}
+            }
+        }
+        #linkedIn{margin : 1rem; margin-right : 0rem;}
+    }
+}
+
+
 @mixin aboutSectionMobileDevices() {
     .about{
         #{&}__navigator{
@@ -136,10 +159,10 @@
 @mixin aboutSectionsmallMobileDevices(){
     .about{
         #{&}__navigator{
-            bottom : 15px;
-            height : 35px;
-            width : 20px;
-            left : 55%;
+            bottom : 14px;
+            height : 32px;
+            width : 18px;
+            left : 60%;
         }
         #{&}__flex{
             .third_content{
@@ -148,16 +171,56 @@
         }
         #{&}__first{
             padding-top : 0rem;
+            h2{
+                font-size : 1rem;
+            }
             h2::before{
-                left : 28%;
+                left : 0%;
             }
             h2::after{
-                right : 28%;
+                right : 0%;
             }
         }
     }
     #linkedIn{
-        margin: 1rem 1rem .5rem 1rem;
-        padding : .5rem;
+        margin: 1rem 1.5rem .5rem 1rem;
+        padding : .1rem;
+    }
+}
+
+@mixin aboutSectionDesktopDevices(){
+    .about{
+        #{&}__navigator{
+            left : 56.5%;
+            bottom : 20px;
+        }
+        #{&}__first{
+            padding-top : 2rem;
+            h1{padding : 1rem 0rem;}
+            h2::before{left : 39%;}
+            h2::after {right : 39%;}
+        }
+        #{&}__flex{
+            margin-top: 1rem;
+            .third__image{
+                img{
+                    height : 240px;
+                    width : 210px;
+                }
+            }
+            .third_content{
+                h2{
+                    padding-left : 1rem;
+                }
+                p{
+                    line-height: 1.6rem;
+                    font-size: 1.1rem;
+                    padding : 1rem 2rem 0rem 1rem;
+                }
+            }
+        }
+    }
+    #linkedIn{
+        margin : 1rem;
     }
 }

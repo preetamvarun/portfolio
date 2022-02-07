@@ -236,7 +236,6 @@ body{
 .about{
     position: relative;
     text-align: center;
-    // height : 100vh;
     #{&}__navigator{
         @include navigatorOuterBody($dark);
     }
@@ -319,18 +318,10 @@ body{
     transform : scaleY(1);
 }
 
-/* WRITING MEDIA QUERIES FOR THE ABOUT SECTION */
-
-/* FIRSTLY STYLE THE ABOUT SECTION FOR MOBILE PHONES */
-
-@media(max-width : 500px){
-    @include aboutSectionMobileDevices();
-}
-
-@media(max-width : 290px){
-    @include aboutSectionsmallMobileDevices();
-}
-
+@media(max-width : 290px){@include aboutSectionsmallMobileDevices();}
+@media(max-width : 500px){@include aboutSectionMobileDevices();}
+@media (min-width : 501px) and (max-width : 768px){@include aboutSectionTablets();}
+@media (min-width : 769px) and (max-width : 1200px){@include aboutSectionDesktopDevices();}
 
 
 /* styling the projects section */
