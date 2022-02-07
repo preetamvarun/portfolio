@@ -20,13 +20,13 @@ body {
   position: relative;
 }
 
-#typeWriter {
+#typeWriter, #typeWriter1 {
   position: relative;
   margin-left: .5rem;
   color: #DC143C;
 }
 
-#typeWriter::after {
+#typeWriter::after, #typeWriter1::after {
   position: absolute;
   content: '';
   border-right: 2px solid #DC143C;
@@ -166,6 +166,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-color: violet;
 }
 
 .nav .nav__fixed h1 {

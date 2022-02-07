@@ -23,13 +23,13 @@ body{
     position: relative;
 }
 
-#typeWriter{
+#typeWriter,#typeWriter1{
     position: relative;
     margin-left : .5rem;
     color : $webmaincolor;
 }
 
-#typeWriter::after{
+#typeWriter::after,#typeWriter1::after{
     position: absolute;
     content : '';
     border-right : 2px solid $webmaincolor;
@@ -103,6 +103,7 @@ body{
             margin-left : 3rem;
             z-index: 1;
         }
+        background-color: $testColor4;
     }
     #{&}__x{
         color : $webmaincolor;
@@ -281,6 +282,9 @@ body{
         .third_content{
             flex: 3;
             @include flex(column,center,start);
+            span{
+                color : $webmaincolor;
+            }
             p{
                 text-align: justify;
                 line-height: 1.7rem;
