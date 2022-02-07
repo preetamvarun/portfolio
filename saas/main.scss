@@ -232,7 +232,6 @@ body{
 
 
 // now style the about section
-
 .about{
     position: relative;
     text-align: center;
@@ -273,11 +272,12 @@ body{
         grid-template-columns: 1fr 2fr;
         .third__image{
             img{
-                height : 330px;
+                height : 310px;
                 width : 260px;
                 border-radius: 1%;
                 display: block;
                 margin : 0 auto;
+                margin-bottom : 1.5rem;
                 box-shadow: 1px 1px 3px rgba(4,4,4,.4);
             }
         }
@@ -317,7 +317,6 @@ body{
 #linkedIn:hover::before{
     transform : scaleY(1);
 }
-
 @media(max-width : 290px){@include aboutSectionsmallMobileDevices();}
 @media(max-width : 500px){@include aboutSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px){@include aboutSectionTablets();}
@@ -329,13 +328,13 @@ body{
 .projects{
     position: relative;
     background-color: $dark;
-    height: 110vh;
     color : $white;
     padding : 3rem;
 
     #{&}__navigator{
         @include navigatorOuterBody(white);
     }
+
     #{&}__navigator::before{
         @include navigatorArrow(15%);
         animation: animate 1s ease-in-out infinite;
@@ -369,6 +368,7 @@ body{
 
     #{&}__second{
         @include flex(row,space-evenly,center);
+        margin-bottom: 2rem;
     }
 
     .projects__ml,.projects__blogspot,.projects__shoppinglist{
@@ -416,6 +416,15 @@ body{
         cursor: pointer;
     }
 }
+
+
+
+/*WRITE MEDIA QUERIES FOR PROJECTS SECTION*/
+@media (max-width : 500px){@include projectsSectionMobileDevices();}
+@media (min-width : 501px) and (max-width : 768px){@include projectsSectionTabletDevices();}
+@media (min-width : 769px) and (max-width : 1200px){@include projectsSectionDesktopDevices();}
+
+
 
 /* now start styling skills section */
 

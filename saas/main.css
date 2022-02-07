@@ -460,11 +460,12 @@ body {
 }
 
 .about .about__flex .third__image img {
-  height: 330px;
+  height: 310px;
   width: 260px;
   border-radius: 1%;
   display: block;
   margin: 0 auto;
+  margin-bottom: 1.5rem;
   -webkit-box-shadow: 1px 1px 3px rgba(4, 4, 4, 0.4);
           box-shadow: 1px 1px 3px rgba(4, 4, 4, 0.4);
 }
@@ -738,7 +739,6 @@ body {
 .projects {
   position: relative;
   background-color: #000;
-  height: 110vh;
   color: #fff;
   padding: 3rem;
 }
@@ -832,6 +832,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2rem;
 }
 
 .projects .projects__ml, .projects .projects__blogspot, .projects .projects__shoppinglist {
@@ -895,6 +896,94 @@ body {
           transform: translateY(0rem);
   opacity: 1;
   cursor: pointer;
+}
+
+/*WRITE MEDIA QUERIES FOR PROJECTS SECTION*/
+@media (max-width: 500px) {
+  .projects {
+    overflow-x: hidden;
+  }
+  .projects .projects__first h1 {
+    padding: 0rem;
+  }
+  .projects .projects__first h3::before {
+    left: 14%;
+  }
+  .projects .projects__first h3::after {
+    right: 14%;
+  }
+  .projects .projects__second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .mlImg, .projects .pyImg, .projects .angularImg {
+    height: 320px;
+    width: 320px;
+    display: block;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .projects {
+    overflow-x: hidden;
+  }
+  .projects .projects__first h1 {
+    padding: 0rem;
+  }
+  .projects .projects__first h3::before {
+    left: 33%;
+  }
+  .projects .projects__first h3::after {
+    right: 33%;
+  }
+  .projects .projects__second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .mlImg, .projects .pyImg, .projects .angularImg {
+    height: 350px;
+    width: 350px;
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .projects .projects__first h1 {
+    padding: 0rem;
+  }
+  .projects .projects__first h3::before {
+    left: 35%;
+  }
+  .projects .projects__first h3::after {
+    right: 35%;
+  }
+  .projects .mlImg, .projects .pyImg, .projects .angularImg {
+    height: 350px;
+    width: 300px;
+    display: block;
+  }
 }
 
 /* now start styling skills section */
