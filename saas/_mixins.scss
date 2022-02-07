@@ -284,9 +284,56 @@
             }
         }
         .mlImg,.pyImg,.angularImg{
-            height : 350px;
-            width : 300px;
+            height : 320px;
+            width : 230px;
             display: block;
         }   
+    }
+}
+
+@mixin skillsSectionMobileDevices(){
+    .skills{
+        #{&}__navigator{
+            bottom: 10px;
+        }
+        #{&}__first{
+            h3::before{
+                left : 25%;
+            }
+            h3::after {
+                right : 25%;
+            }
+        }
+        #{&}__second{
+            margin-bottom : 2rem;
+            h3 {font-size : 1rem;}
+            p {line-height: 1.2rem;}
+        }
+    }
+}
+
+@mixin skillsSectionTabletDevices(){
+    .skills{
+        #{&}__first{
+            h3::before{
+                left : 34%;
+            }
+            h3::after{
+                right : 34%;
+            }
+        }
+    }
+}
+
+@mixin skillsSectionDesktopDevices(){
+    .skills{
+        #{&}__first{
+            h3::before{
+                left : 38%;
+            }
+            h3::after{
+                right : 38%;
+            }
+        }
     }
 }
