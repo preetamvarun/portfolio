@@ -109,7 +109,7 @@ body{
     }
 
     #{&}__changeFixed{
-        background-color: $webmaincolor1;
+        background-color: $webmaincolor;
         box-shadow: 3px 0px 4px .5px rgba(0, 0, 0, .75);
     }
     #{&}__menu{
@@ -132,12 +132,12 @@ body{
                     position: relative;
                     margin : 0rem .1rem;
                     .dot{
-                        @include dot(yellow);
+                        @include dot();
                         left : 0%;
                     }
                 }
                 a::after,a::before{
-                    @include dot(yellow);
+                    @include dot();
                     content: '';
                 }
                 a::after{
@@ -236,8 +236,7 @@ body{
 .about{
     position: relative;
     text-align: center;
-    height : 100vh;
-    background-color: white;
+    // height : 100vh;
     #{&}__navigator{
         @include navigatorOuterBody($dark);
     }
@@ -284,7 +283,6 @@ body{
             }
         }
         .third_content{
-            flex: 3;
             @include flex(column,center,start);
             span{
                 color : $webmaincolor;
@@ -320,6 +318,19 @@ body{
 #linkedIn:hover::before{
     transform : scaleY(1);
 }
+
+/* WRITING MEDIA QUERIES FOR THE ABOUT SECTION */
+
+/* FIRSTLY STYLE THE ABOUT SECTION FOR MOBILE PHONES */
+
+@media(max-width : 500px){
+    @include aboutSectionMobileDevices();
+}
+
+@media(max-width : 290px){
+    @include aboutSectionsmallMobileDevices();
+}
+
 
 
 /* styling the projects section */
@@ -813,6 +824,3 @@ body{
         font-size: 1.1rem;
     }
 }
-
-
-

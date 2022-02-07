@@ -1,3 +1,4 @@
+/* MEDIA QUERY MIXINS */
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -375,8 +376,6 @@ body {
 .about {
   position: relative;
   text-align: center;
-  height: 100vh;
-  background-color: white;
 }
 
 .about .about__navigator {
@@ -471,9 +470,6 @@ body {
 }
 
 .about .about__flex .third_content {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,6 +529,113 @@ body {
 #linkedIn:hover::before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+/* WRITING MEDIA QUERIES FOR THE ABOUT SECTION */
+/* FIRSTLY STYLE THE ABOUT SECTION FOR MOBILE PHONES */
+@media (max-width: 500px) {
+  .about .about__navigator {
+    bottom: 15px;
+    height: 45px;
+    width: 25px;
+  }
+  .about .about__first {
+    padding-top: .5rem;
+  }
+  .about .about__first h2 {
+    color: #DC143C;
+    position: relative;
+  }
+  .about .about__first h2::before, .about .about__first h2::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 4%;
+    top: 50%;
+    border-radius: 5px;
+    background-color: #000;
+  }
+  .about .about__first h2::before {
+    left: 32%;
+  }
+  .about .about__first h2::after {
+    right: 32%;
+  }
+  .about .about__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about .about__flex .third__image img {
+    height: 220px;
+    width: 170px;
+    border-radius: 1%;
+    display: block;
+    margin: .75rem auto;
+    -webkit-box-shadow: 1px 1px 3px rgba(4, 4, 4, 0.4);
+            box-shadow: 1px 1px 3px rgba(4, 4, 4, 0.4);
+  }
+  .about .about__flex .third_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .about .about__flex .third_content h2 {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  .about .about__flex .third_content span {
+    color: #DC143C;
+  }
+  .about .about__flex .third_content p {
+    text-align: justify;
+    line-height: 1.4rem;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  #linkedIn {
+    margin: 1rem 1rem .5rem 1rem;
+    padding: .9rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .about .about__navigator {
+    bottom: 15px;
+    height: 35px;
+    width: 20px;
+    left: 55%;
+  }
+  .about .about__flex .third_content h2 {
+    font-size: .85rem;
+  }
+  .about .about__first {
+    padding-top: 0rem;
+  }
+  .about .about__first h2::before {
+    left: 28%;
+  }
+  .about .about__first h2::after {
+    right: 28%;
+  }
+  #linkedIn {
+    margin: 1rem 1rem .5rem 1rem;
+    padding: .5rem;
+  }
 }
 
 /* styling the projects section */

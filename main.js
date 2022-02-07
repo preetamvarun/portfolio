@@ -1,8 +1,8 @@
 let backgroundDivs = document.getElementsByClassName('background--noAnimate');
 let typeWriter = document.getElementById('typeWriter');
 let typeWriter1 = document.getElementById('typeWriter1');
-let texts = ['Poorna Sandeep','a Web Developer','a competetive programmer'];
-let texts1 = ['Web Developer','Competetive Programmer'];
+let texts = ['Poorna Sandeep','a Web Developer','a problem solver'];
+let texts1 = ['Web Developer','problem solver'];
 let count = 0, index = 0, currentText = "", letter = "";
 let count1 = 0, index1 = 0, currentText1 = "", letter1 = "";
 

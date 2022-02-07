@@ -7,8 +7,8 @@
 }
 
 // create a dot mixin 
-@mixin dot($color){
-    background-color: $color;
+@mixin dot(){
+    background-color: tomato;
     position: absolute;
     height : 5px;
     width : 5px;
@@ -68,4 +68,96 @@
     transform: translate(-50%,-100%) rotate(45deg);
     border-top: transparent;
     border-left: transparent;
+}
+
+
+/* MEDIA QUERY MIXINS */
+
+@mixin aboutSectionMobileDevices() {
+    .about{
+        #{&}__navigator{
+            bottom : 15px;
+            height : 45px;
+            width : 25px;
+        }
+        #{&}__first{
+            padding-top : .5rem;
+            h2{
+                color : $webmaincolor;
+                position: relative;
+            }
+            h2::before, h2::after{
+                @include horizontaLine($dark);
+            }
+            h2::before{
+                left : 32%;
+            }
+            h2::after{
+                right : 32%;
+            }
+        }
+        #{&}__flex{
+            display: flex;
+            flex-direction: column;
+            .third__image{
+                img{
+                    height : 220px;
+                    width : 170px;
+                    border-radius: 1%;
+                    display: block;
+                    margin : .75rem auto;
+                    box-shadow: 1px 1px 3px rgba(4,4,4,.4);
+                }
+            }
+            .third_content{
+                @include flex(column,center,start);
+                h2{
+                    font-size: 1rem;
+                    margin : 0 auto;
+                }
+                span{
+                    color : $webmaincolor;
+                }
+                p{
+                    text-align: justify;
+                    line-height: 1.4rem;
+                    font-size: 1rem;
+                    padding : 1rem;
+                }
+            }
+        }
+    }
+    #linkedIn{
+        margin: 1rem 1rem .5rem 1rem;
+        padding : .9rem;
+    }
+}
+
+@mixin aboutSectionsmallMobileDevices(){
+    .about{
+        #{&}__navigator{
+            bottom : 15px;
+            height : 35px;
+            width : 20px;
+            left : 55%;
+        }
+        #{&}__flex{
+            .third_content{
+                h2{font-size: .85rem;}
+            }
+        }
+        #{&}__first{
+            padding-top : 0rem;
+            h2::before{
+                left : 28%;
+            }
+            h2::after{
+                right : 28%;
+            }
+        }
+    }
+    #linkedIn{
+        margin: 1rem 1rem .5rem 1rem;
+        padding : .5rem;
+    }
 }
