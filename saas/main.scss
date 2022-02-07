@@ -19,7 +19,6 @@ body{
 /* Adding type writer effect */
 #skill{
     font-size : 2.3rem;
-    // background-color: violet;
     position: relative;
 }
 
@@ -96,17 +95,22 @@ body{
 
 
     #{&}__fixed{
-        @include flex(row,space-between,flex-start);
+        position: fixed;
+        width: 100%;
+        @include flex(row,flex-end,center);
+        z-index: 3;
+        transition: all .75s ease;
         h1{
             padding : 1.5rem;
             padding-left : 0rem;
             margin-left : 3rem;
             z-index: 1;
         }
-        background-color: $testColor4;
     }
-    #{&}__x{
-        color : $webmaincolor;
+
+    #{&}__changeFixed{
+        background-color: $webmaincolor1;
+        box-shadow: 3px 0px 4px .5px rgba(0, 0, 0, .75);
     }
     #{&}__menu{
         z-index: 1;
@@ -114,11 +118,11 @@ body{
         ul{
             list-style: none;
             @include flex(row,space-between,center);
-            padding : 1.5rem;
+            padding : 1rem;
             li{
                 font-weight: map-get($map: $font-weights, $key: 'bold');
                 transition: all 1s ease;
-                font-size : 1.1rem;
+                font-size : 1rem;
                 a{
                     text-decoration: none;
                     color : $white;
@@ -128,12 +132,12 @@ body{
                     position: relative;
                     margin : 0rem .1rem;
                     .dot{
-                        @include dot();
+                        @include dot(yellow);
                         left : 0%;
                     }
                 }
                 a::after,a::before{
-                    @include dot();
+                    @include dot(yellow);
                     content: '';
                 }
                 a::after{
@@ -143,7 +147,7 @@ body{
                     left : 0%;
                 }
                 a:hover{
-                    color : $webmaincolor;
+                    color : tomato;
                 }
                 a:hover::before{
                     left : 35%;

@@ -153,6 +153,8 @@ body {
 }
 
 .nav .nav__fixed {
+  position: fixed;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,13 +162,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: violet;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+  -webkit-transition: all .75s ease;
+  transition: all .75s ease;
 }
 
 .nav .nav__fixed h1 {
@@ -176,8 +180,10 @@ body {
   z-index: 1;
 }
 
-.nav .nav__x {
-  color: #DC143C;
+.nav .nav__changeFixed {
+  background-color: #DC143C;
+  -webkit-box-shadow: 3px 0px 4px 0.5px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 0px 4px 0.5px rgba(0, 0, 0, 0.75);
 }
 
 .nav .nav__menu {
@@ -200,14 +206,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .nav .nav__menu ul li {
   font-weight: 900;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .nav .nav__menu ul li a {
@@ -222,7 +228,7 @@ body {
 }
 
 .nav .nav__menu ul li a .dot {
-  background-color: #DC143C;
+  background-color: tomato;
   position: absolute;
   height: 5px;
   width: 5px;
@@ -235,7 +241,7 @@ body {
 }
 
 .nav .nav__menu ul li a::after, .nav .nav__menu ul li a::before {
-  background-color: #DC143C;
+  background-color: tomato;
   position: absolute;
   height: 5px;
   width: 5px;
@@ -256,7 +262,7 @@ body {
 }
 
 .nav .nav__menu ul li a:hover {
-  color: #DC143C;
+  color: tomato;
 }
 
 .nav .nav__menu ul li a:hover::before {
@@ -481,6 +487,10 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+}
+
+.about .about__flex .third_content span {
+  color: #DC143C;
 }
 
 .about .about__flex .third_content p {

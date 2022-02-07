@@ -59,3 +59,29 @@ let backgroundObserver = new IntersectionObserver(function(entries){
 },options);
 
 backgroundDivs.forEach((backgroundDiv) => backgroundObserver.observe(backgroundDiv));
+
+
+// place an observer on the entire nav div 
+
+let navDiv = document.getElementsByClassName('nav');
+let navBck = document.getElementById('navigation-menu');
+let menuLinks = document.getElementsByClassName('menu-links');
+
+let options1 = {
+    rootMargin : "-60px 0px 0px 0px"
+};
+
+/* Here the entry is gonna be a single div */
+
+let navDivObserver = new IntersectionObserver(function(entry){
+    // console.log(entry[0].target);
+    if(!entry[0].isIntersecting){
+        navBck.classList.add('nav__changeFixed');
+    } else{
+        navBck.classList.remove('nav__changeFixed');
+    }
+}, options1);
+
+navDiv = Array.from(navDiv);
+
+navDivObserver.observe(navDiv[0]);
