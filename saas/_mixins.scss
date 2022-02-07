@@ -94,6 +94,7 @@
         #linkedIn{margin : 1rem; margin-right : 0rem;}
     }
 }
+
 @mixin aboutSectionMobileDevices() {
     .about{
         #{&}__navigator{
@@ -153,6 +154,7 @@
         padding : .9rem;
     }
 }
+
 @mixin aboutSectionsmallMobileDevices(){
     .about{
         #{&}__navigator{
@@ -184,6 +186,7 @@
         padding : .1rem;
     }
 }
+
 @mixin aboutSectionDesktopDevices(){
     .about{
         #{&}__navigator{
@@ -220,6 +223,7 @@
         margin : 1rem;
     }
 }
+
 @mixin projectsSectionMobileDevices(){
     .projects{
         overflow-x: hidden;
@@ -333,6 +337,99 @@
             }
             h3::after{
                 right : 38%;
+            }
+        }
+    }
+}
+
+@mixin backgroundSectionTabletDevices(){
+    .background{
+        #{&}__first{
+            h3::before{
+                left : 41%;
+            }
+            h3::after{
+                right : 41%;
+            }
+        }
+        #{&}__second{
+            li div{
+                width : 310px;
+            }
+            li:nth-child(even) div{
+                left : -350px;
+            }
+        }
+    }
+}
+
+@mixin backgroundSectionTabletDevices1(){
+    .background{
+        #{&}__first{
+            h3::before{
+                left : 38%;
+            }
+            h3::after{
+                right : 38%;
+            }
+        }
+    
+        #{&}__second{
+            li div{
+                width : 210px;
+            }
+            li:nth-child(even) div{
+                left : -250px;
+            }
+        }
+    }
+}
+
+@mixin backgroundSectionDesktopDevices(){
+    .background{
+        #{&}__first{
+            h3::before{
+                left : 40%;
+            }
+            h3::after{
+                right : 40%;
+            }
+        }
+        #{&}__second{
+            li div{
+                width : 320px;
+            }
+            li:nth-child(even) div{
+                left : -355px;
+            }
+        }
+    }
+}
+
+@mixin backgroundSectionMobileDevices(){
+    .background{
+        #{&}__first{
+            h3::before{
+                left : 32%;
+            }
+            h3::after{
+                right : 32%;
+            }
+        }
+        #{&}__second{
+            li{
+                margin-left : 1rem;
+            }
+            li div{
+                width : calc(100vw - 90px);
+            }
+            li:nth-child(even) div{
+                left : 40px;
+            }
+            li:nth-child(even) div::before{
+                left : -15px;
+                border-width : 8px 16px 8px 0px;
+                border-color : transparent white transparent transparent;            
             }
         }
     }

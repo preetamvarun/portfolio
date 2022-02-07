@@ -1132,10 +1132,9 @@ body {
 /* style educational background tommorow */
 .background {
   background: #000;
-  padding: 3rem;
-  overflow-x: hidden;
+  padding: 1rem;
+  overflow: hidden;
   position: relative;
-  height: 220vh;
 }
 
 .background .background__navigator {
@@ -1221,12 +1220,18 @@ body {
   margin: 0 auto;
 }
 
+.background .background__second ul {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .background .background__second li {
   list-style: none;
   position: relative;
+  display: block;
   width: 4px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 20px;
   background: #f3f3f3d5;
 }
 
@@ -1252,13 +1257,13 @@ body {
   background-color: white;
   color: black;
   width: 450px;
-  padding: 1rem;
+  padding: .45rem;
 }
 
 .background .background__second li div h2 {
-  padding-bottom: .5rem;
+  padding-bottom: .3rem;
   color: #DC143C;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .background .background__second li div h2 i {
@@ -1267,7 +1272,7 @@ body {
 }
 
 .background .background__second li div p {
-  line-height: 1.5rem;
+  line-height: 1.3rem;
   font-size: .9rem;
 }
 
@@ -1321,6 +1326,75 @@ body {
 
 .background .background__second li:nth-child(even) div {
   left: -485px;
+}
+
+/* WRITE MEDIA QUERIES FOR BACKGROUND SECTION */
+@media (min-width: 541px) and (max-width: 768px) {
+  .background .background__first h3::before {
+    left: 41%;
+  }
+  .background .background__first h3::after {
+    right: 41%;
+  }
+  .background .background__second li div {
+    width: 310px;
+  }
+  .background .background__second li:nth-child(even) div {
+    left: -350px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 540px) {
+  .background .background__first h3::before {
+    left: 38%;
+  }
+  .background .background__first h3::after {
+    right: 38%;
+  }
+  .background .background__second li div {
+    width: 210px;
+  }
+  .background .background__second li:nth-child(even) div {
+    left: -250px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .background .background__first h3::before {
+    left: 40%;
+  }
+  .background .background__first h3::after {
+    right: 40%;
+  }
+  .background .background__second li div {
+    width: 320px;
+  }
+  .background .background__second li:nth-child(even) div {
+    left: -355px;
+  }
+}
+
+@media (max-width: 500px) {
+  .background .background__first h3::before {
+    left: 32%;
+  }
+  .background .background__first h3::after {
+    right: 32%;
+  }
+  .background .background__second li {
+    margin-left: 1rem;
+  }
+  .background .background__second li div {
+    width: calc(100vw - 90px);
+  }
+  .background .background__second li:nth-child(even) div {
+    left: 40px;
+  }
+  .background .background__second li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0px;
+    border-color: transparent white transparent transparent;
+  }
 }
 
 /* Now style the contact form */
