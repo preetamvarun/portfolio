@@ -16,6 +16,46 @@ body{
     overflow-x: hidden;
 }
 
+/* Adding type writer effect */
+#skill{
+    font-size : 2.3rem;
+    // background-color: violet;
+    position: relative;
+}
+
+#typeWriter{
+    position: relative;
+    margin-left : .5rem;
+    color : $webmaincolor;
+}
+
+#typeWriter::after{
+    position: absolute;
+    content : '';
+    border-right : 2px solid $webmaincolor;
+    height : 80%;
+    right : -5px;
+    left : 0%;
+    top : 50%;
+    transform: translateY(-50%);
+    animation-name: blinkAnimation;
+    animation-duration: .75s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinkAnimation{
+    0%{
+        opacity : 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity : 0;
+    }
+}
+
 .nav{
     position: relative;
     height : 100vh;
@@ -154,12 +194,7 @@ body{
     font-weight: map-get($map: $font-weights, $key: 'bold');
     margin : .6rem 0rem;
 }
-#skill{
-    font-size : 2.2rem;
-    span{
-        color : $webmaincolor;
-    }
-}
+
 
 #download{
     text-decoration : none;

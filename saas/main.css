@@ -14,6 +14,62 @@ body {
   overflow-x: hidden;
 }
 
+/* Adding type writer effect */
+#skill {
+  font-size: 2.3rem;
+  position: relative;
+}
+
+#typeWriter {
+  position: relative;
+  margin-left: .5rem;
+  color: #DC143C;
+}
+
+#typeWriter::after {
+  position: absolute;
+  content: '';
+  border-right: 2px solid #DC143C;
+  height: 80%;
+  right: -5px;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation-name: blinkAnimation;
+          animation-name: blinkAnimation;
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blinkAnimation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkAnimation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .nav {
   position: relative;
   height: 100vh;
@@ -253,14 +309,6 @@ body {
   font-size: 3rem;
   font-weight: 900;
   margin: .6rem 0rem;
-}
-
-#skill {
-  font-size: 2.2rem;
-}
-
-#skill span {
-  color: #DC143C;
 }
 
 #download {
