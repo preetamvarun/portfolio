@@ -232,10 +232,10 @@
                 padding : 0rem;
             }
             h3::before{
-                left : 14%;
+                left : 20%;
             }
             h3::after{
-                right : 14%;
+                right : 20%;
             }
         }
         #{&}__second{
@@ -257,10 +257,10 @@
                 padding : 0rem;
             }
             h3::before{
-                left : 33%;
+                left : 30%;
             }
             h3::after{
-                right : 33%;
+                right : 30%;
             }
         }
         #{&}__second{
@@ -292,6 +292,19 @@
             width : 230px;
             display: block;
         }   
+    }
+}
+
+@mixin projectsSectionMobileDevicesInLandscapeMode(){
+    .projects{
+        #{&}__first{
+            h3::before{
+                left : 30%;
+            }
+            h3::after{
+                right : 30%;
+            }
+        }
     }
 }
 

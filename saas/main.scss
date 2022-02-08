@@ -317,7 +317,10 @@ body{
 #linkedIn:hover::before{
     transform : scaleY(1);
 }
-@media(max-width : 290px){@include aboutSectionsmallMobileDevices();}
+
+/* ABOUT SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
+
+@media(max-width : 290px) {@include aboutSectionsmallMobileDevices();}
 @media(max-width : 500px){@include aboutSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px){@include aboutSectionTablets();}
 @media (min-width : 769px) and (max-width : 1200px){@include aboutSectionDesktopDevices();}
@@ -417,10 +420,13 @@ body{
     }
 }
 
-/*WRITE MEDIA QUERIES FOR PROJECTS SECTION*/
+/* PROJECTS SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
+
 @media (max-width : 500px){@include projectsSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px){@include projectsSectionTabletDevices();}
 @media (min-width : 769px) and (max-width : 1200px){@include projectsSectionDesktopDevices();}
+@media (max-width : 680px) and (orientation : landscape) {@include projectsSectionMobileDevicesInLandscapeMode();}
+
 
 /* now start styling skills section */
 
@@ -483,11 +489,10 @@ body{
     }
 }
 
-/* WRITE MEDIA QUERIES FOR SKILLS SECTION */
+/* SKILLS SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
 @media (max-width : 500px) {@include skillsSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px) {@include skillsSectionTabletDevices();} 
 @media (min-width : 769px) and (max-width : 1200px) {@include skillsSectionDesktopDevices();}
-
 
 
 /* style educational background tommorow */
@@ -848,3 +853,5 @@ body{
 /* WRITE MEDIA QUERIES FOR FOOTER SECTION */
 
 @media (max-width : 540px) {@include footerSectionMobileDevices();}
+
+

@@ -532,6 +532,7 @@ body {
           transform: scaleY(1);
 }
 
+/* ABOUT SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
 @media (max-width: 290px) {
   .about .about__navigator {
     bottom: 14px;
@@ -898,7 +899,7 @@ body {
   cursor: pointer;
 }
 
-/*WRITE MEDIA QUERIES FOR PROJECTS SECTION*/
+/* PROJECTS SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
 @media (max-width: 500px) {
   .projects {
     overflow-x: hidden;
@@ -907,10 +908,10 @@ body {
     padding: 0rem;
   }
   .projects .projects__first h3::before {
-    left: 14%;
+    left: 20%;
   }
   .projects .projects__first h3::after {
-    right: 14%;
+    right: 20%;
   }
   .projects .projects__second {
     display: -webkit-box;
@@ -942,10 +943,10 @@ body {
     padding: 0rem;
   }
   .projects .projects__first h3::before {
-    left: 33%;
+    left: 30%;
   }
   .projects .projects__first h3::after {
-    right: 33%;
+    right: 30%;
   }
   .projects .projects__second {
     display: -webkit-box;
@@ -983,6 +984,15 @@ body {
     height: 320px;
     width: 230px;
     display: block;
+  }
+}
+
+@media (max-width: 680px) and (orientation: landscape) {
+  .projects .projects__first h3::before {
+    left: 30%;
+  }
+  .projects .projects__first h3::after {
+    right: 30%;
   }
 }
 
@@ -1089,7 +1099,7 @@ body {
   line-height: 1.5rem;
 }
 
-/* WRITE MEDIA QUERIES FOR SKILLS SECTION */
+/* SKILLS SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
 @media (max-width: 500px) {
   .skills .skills__navigator {
     bottom: 10px;
