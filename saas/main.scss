@@ -109,9 +109,10 @@ body{
     }
 
     #{&}__changeFixed{
-        background-color: $webmaincolor;
+        background-color: $changedNavBarBckColor;
         box-shadow: 3px 0px 4px .5px rgba(0, 0, 0, .75);
     }
+
     #{&}__menu{
         z-index: 1;
         margin-right : 1.5rem;

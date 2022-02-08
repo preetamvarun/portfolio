@@ -182,7 +182,7 @@ body {
 }
 
 .nav .nav__changeFixed {
-  background-color: #DC143C;
+  background-color: #bd435bc5;
   -webkit-box-shadow: 3px 0px 4px 0.5px rgba(0, 0, 0, 0.75);
           box-shadow: 3px 0px 4px 0.5px rgba(0, 0, 0, 0.75);
 }
