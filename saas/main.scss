@@ -231,7 +231,7 @@ body{
 }
 
 
-// now style the about section
+
 .about{
     position: relative;
     text-align: center;
@@ -319,14 +319,12 @@ body{
 }
 
 /* ABOUT SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
-
 @media(max-width : 290px) {@include aboutSectionsmallMobileDevices();}
 @media(max-width : 500px){@include aboutSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px){@include aboutSectionTablets();}
 @media (min-width : 769px) and (max-width : 1200px){@include aboutSectionDesktopDevices();}
 
 
-/* styling the projects section */
 
 .projects{
     position: relative;
@@ -428,7 +426,6 @@ body{
 @media (max-width : 680px) and (orientation : landscape) {@include projectsSectionMobileDevicesInLandscapeMode();}
 
 
-/* now start styling skills section */
 
 .skills{
     position: relative;
@@ -495,7 +492,7 @@ body{
 @media (min-width : 769px) and (max-width : 1200px) {@include skillsSectionDesktopDevices();}
 
 
-/* style educational background tommorow */
+
 .background{
     background: $dark;
     padding : 1rem;
@@ -780,23 +777,16 @@ body{
 
 /* Now style the section that is above the footer */
 
-/* WRITE MEDIA QUERIES FOR DARK SECTION */
-@media (max-width : 500px) {@include darkSectionMobileDevices();}
-
-
 .dark{
-    height : 30vh;
     background-color: $darkContentBckColor;
-    position: relative;
 
     #{&}__content{
-        position: absolute;
-        top : 50%;
-        left : 50%;
-        transform: translate(-50%,-50%);
+
+        text-align: center;
 
         h1{
             font-size: 2rem;
+            padding : 1.25rem 0rem;
             color : white;
             span{
                 color : $webmaincolor;
@@ -804,18 +794,18 @@ body{
         }
 
         p{
-            text-align: center;
-            margin : 1.5rem 0rem;
             font-size: 1.1rem;
             color : white;
+            margin : 0rem 0rem 1rem 0rem;
         }
     }
 
     #{&}__icons{
         ul{
-            @include flex(row,space-evenly,center);
-            width : 70%;
+            max-width : 25%;
             margin : 0 auto;
+            @include flex(row,space-evenly,center);
+            padding-bottom : 1rem;
         }
         ul li{
             list-style: none;
@@ -837,21 +827,12 @@ body{
 /* Now style the footer section */
 .footer{
     background-color: #191919;
-    height : 12vh;
-    display: block;
-    position: relative;
     p{
-        position: absolute;
-        top : 50%;
-        left : 50%;
-        transform: translate(-50%,-50%);
         color : rgb(224, 217, 217);
         font-size: 1.1rem;
+        text-align: center;
+        padding : 1.75rem;
     }
 }
-
-/* WRITE MEDIA QUERIES FOR FOOTER SECTION */
-
-@media (max-width : 540px) {@include footerSectionMobileDevices();}
 
 

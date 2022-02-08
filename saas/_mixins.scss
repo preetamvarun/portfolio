@@ -548,24 +548,3 @@
         }
     }
 }
-
-@mixin darkSectionMobileDevices(){
-    .dark{
-        #{&}__content{
-            width : 100%;
-            h1{
-                text-align: center;
-            }
-        }
-    }
-}
-
-@mixin footerSectionMobileDevices(){
-    .footer{
-        p{
-            width : 100%;
-            text-align: center;
-            font-size: 1rem;
-        }
-    }
-}

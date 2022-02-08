@@ -736,7 +736,6 @@ body {
   }
 }
 
-/* styling the projects section */
 .projects {
   position: relative;
   background-color: #000;
@@ -996,7 +995,6 @@ body {
   }
 }
 
-/* now start styling skills section */
 .skills {
   position: relative;
   padding: 2.5rem;
@@ -1139,7 +1137,6 @@ body {
   }
 }
 
-/* style educational background tommorow */
 .background {
   background: #000;
   padding: 1rem;
@@ -1678,32 +1675,17 @@ body {
 }
 
 /* Now style the section that is above the footer */
-/* WRITE MEDIA QUERIES FOR DARK SECTION */
-@media (max-width: 500px) {
-  .dark .dark__content {
-    width: 100%;
-  }
-  .dark .dark__content h1 {
-    text-align: center;
-  }
-}
-
 .dark {
-  height: 30vh;
   background-color: #272626;
-  position: relative;
 }
 
 .dark .dark__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .dark .dark__content h1 {
   font-size: 2rem;
+  padding: 1.25rem 0rem;
   color: white;
 }
 
@@ -1712,13 +1694,14 @@ body {
 }
 
 .dark .dark__content p {
-  text-align: center;
-  margin: 1.5rem 0rem;
   font-size: 1.1rem;
   color: white;
+  margin: 0rem 0rem 1rem 0rem;
 }
 
 .dark .dark__icons ul {
+  max-width: 25%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1732,8 +1715,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70%;
-  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
 .dark .dark__icons ul li {
@@ -1757,27 +1739,12 @@ body {
 /* Now style the footer section */
 .footer {
   background-color: #191919;
-  height: 12vh;
-  display: block;
-  position: relative;
 }
 
 .footer p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   color: #e0d9d9;
   font-size: 1.1rem;
-}
-
-/* WRITE MEDIA QUERIES FOR FOOTER SECTION */
-@media (max-width: 540px) {
-  .footer p {
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-  }
+  text-align: center;
+  padding: 1.75rem;
 }
 /*# sourceMappingURL=main.css.map */
