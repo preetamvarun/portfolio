@@ -247,7 +247,7 @@ body{
 @media (max-width : 500px){
     @include hamburgerMixin(block);
     .nav{
-        height : 70vh;
+        height : 65vh;
         #{&}__fixed{
             display: none;
         }
@@ -260,6 +260,25 @@ body{
     }
     #skill,#typeWriter{
         font-size : 2rem;
+    }
+}
+
+@media (max-width : 380px){
+    @include hamburgerMixin(block);
+    .nav{
+        height : 100vh;
+        #{&}__fixed{
+            display: none;
+        }
+        #{&}__intro{
+            z-index: 0;
+        }
+    }
+    #download{
+        margin-top : 2rem;
+    }
+    #skill,#typeWriter{
+        font-size : 1.5rem;
     }
 }
 
