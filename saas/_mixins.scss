@@ -34,13 +34,13 @@
 
 // include horizontal line mixin 
 @mixin horizontaLine($color){
-        position: absolute;
-        content: "";
-        height : 3px;
-        width : 4%;
-        top : 50%;
-        border-radius : 5px;
-        background-color: $color;
+    position: absolute;
+    content: "";
+    height : 3px;
+    width : 4%;
+    top : 50%;
+    border-radius : 5px;
+    background-color: $color;
 }
 
 // create a navigator outer body mixin
@@ -49,7 +49,7 @@
     height : 50px;
     width : 30px;
     border : 2px solid $color;
-    z-index : 999;
+    z-index : 1;
     bottom : 15px;
     left : 50%;
     position: absolute;
