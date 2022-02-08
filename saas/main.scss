@@ -775,8 +775,12 @@ body{
 
 /* Now style the section that is above the footer */
 
+/* WRITE MEDIA QUERIES FOR DARK SECTION */
+@media (max-width : 500px) {@include darkSectionMobileDevices();}
+
+
 .dark{
-    height : 40vh;
+    height : 30vh;
     background-color: $darkContentBckColor;
     position: relative;
 
@@ -787,7 +791,7 @@ body{
         transform: translate(-50%,-50%);
 
         h1{
-            font-size: 3rem;
+            font-size: 2rem;
             color : white;
             span{
                 color : $webmaincolor;

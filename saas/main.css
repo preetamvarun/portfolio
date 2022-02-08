@@ -1668,8 +1668,18 @@ body {
 }
 
 /* Now style the section that is above the footer */
+/* WRITE MEDIA QUERIES FOR DARK SECTION */
+@media (max-width: 500px) {
+  .dark .dark__content {
+    width: 100%;
+  }
+  .dark .dark__content h1 {
+    text-align: center;
+  }
+}
+
 .dark {
-  height: 40vh;
+  height: 30vh;
   background-color: #272626;
   position: relative;
 }
@@ -1683,7 +1693,7 @@ body {
 }
 
 .dark .dark__content h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
 }
 

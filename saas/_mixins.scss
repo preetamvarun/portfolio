@@ -536,3 +536,13 @@
     }
 }
 
+@mixin darkSectionMobileDevices(){
+    .dark{
+        #{&}__content{
+            width : 100%;
+            h1{
+                text-align: center;
+            }
+        }
+    }
+}
