@@ -1747,7 +1747,8 @@ body {
 /* Now style the footer section */
 .footer {
   background-color: #191919;
-  height: 13vh;
+  height: 12vh;
+  display: block;
   position: relative;
 }
 
@@ -1759,5 +1760,14 @@ body {
           transform: translate(-50%, -50%);
   color: #e0d9d9;
   font-size: 1.1rem;
+}
+
+/* WRITE MEDIA QUERIES FOR FOOTER SECTION */
+@media (max-width: 540px) {
+  .footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

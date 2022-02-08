@@ -832,7 +832,8 @@ body{
 /* Now style the footer section */
 .footer{
     background-color: #191919;
-    height : 13vh;
+    height : 12vh;
+    display: block;
     position: relative;
     p{
         position: absolute;
@@ -843,3 +844,7 @@ body{
         font-size: 1.1rem;
     }
 }
+
+/* WRITE MEDIA QUERIES FOR FOOTER SECTION */
+
+@media (max-width : 540px) {@include footerSectionMobileDevices();}
