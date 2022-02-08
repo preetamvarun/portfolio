@@ -362,7 +362,7 @@ body{
 }
 
 /* ABOUT SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
-@media(max-width : 290px) {@include aboutSectionsmallMobileDevices();}
+@media(max-width : 290px){@include aboutSectionsmallMobileDevices();}
 @media(max-width : 500px){@include aboutSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px){@include aboutSectionTablets();}
 @media (min-width : 769px) and (max-width : 1200px){@include aboutSectionDesktopDevices();}
