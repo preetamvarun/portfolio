@@ -87,7 +87,6 @@ body {
   z-index: 1;
   width: 40px;
   height: 40px;
-  padding: .85rem;
   background-color: #fc06377e;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,7 +513,6 @@ body {
     z-index: 1;
     width: 40px;
     height: 40px;
-    padding: .85rem;
     background-color: #fc06377e;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -777,7 +775,6 @@ body {
     z-index: 1;
     width: 40px;
     height: 40px;
-    padding: .85rem;
     background-color: #fc06377e;
     display: -webkit-box;
     display: -ms-flexbox;
