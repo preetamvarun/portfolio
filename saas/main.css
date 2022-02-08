@@ -231,8 +231,8 @@ body {
 }
 
 .menuWrap .toggler:checked ~ .menu > div {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .menuWrap .menu > div > div {
@@ -495,7 +495,7 @@ body {
   position: absolute;
   top: 25%;
   left: 3.5%;
-  z-index: 0;
+  z-index: 1;
 }
 
 @media (max-width: 500px) {
@@ -647,8 +647,8 @@ body {
             flex: none;
   }
   .menuWrap .toggler:checked ~ .menu > div {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   .menuWrap .menu > div > div {
     text-align: center;
@@ -755,7 +755,13 @@ body {
           transform: scaleX(0.6);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .nav {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 500px) {
   .menuWrap {
     position: fixed;
     z-index: 1;
@@ -904,8 +910,8 @@ body {
             flex: none;
   }
   .menuWrap .toggler:checked ~ .menu > div {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   .menuWrap .menu > div > div {
     text-align: center;
@@ -936,8 +942,20 @@ body {
   .menuWrap .toggler:checked ~ .menu {
     visibility: visible;
   }
+  .nav {
+    height: 70vh;
+  }
   .nav .nav__fixed {
     display: none;
+  }
+  .nav .nav__intro {
+    z-index: 0;
+  }
+  #download {
+    margin-top: 2rem;
+  }
+  #skill, #typeWriter {
+    font-size: 2rem;
   }
 }
 

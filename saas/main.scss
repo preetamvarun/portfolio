@@ -179,7 +179,7 @@ body{
         position: absolute;
         top : 25%;
         left : 3.5%;
-        z-index: 0;
+        z-index: 1;
     }
 }
 
@@ -238,12 +238,28 @@ body{
     transform: scaleX(0.6);
 }
 
-@media (max-width : 768px){
+@media (max-width : 1200px){
+    .nav{
+        height : 60vh;
+    }
+}
+
+@media (max-width : 500px){
     @include hamburgerMixin(block);
     .nav{
+        height : 70vh;
         #{&}__fixed{
             display: none;
         }
+        #{&}__intro{
+            z-index: 0;
+        }
+    }
+    #download{
+        margin-top : 2rem;
+    }
+    #skill,#typeWriter{
+        font-size : 2rem;
     }
 }
 
