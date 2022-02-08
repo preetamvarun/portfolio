@@ -1,7 +1,7 @@
 let backgroundDivs = document.getElementsByClassName('background--noAnimate');
 let typeWriter = document.getElementById('typeWriter');
 let typeWriter1 = document.getElementById('typeWriter1');
-let texts = ['Poorna Sandeep','a Web Developer','a problem solver'];
+let texts = ['a Web Developer','a problem solver'];
 let texts1 = ['Web Developer','problem solver'];
 let count = 0, index = 0, currentText = "", letter = "";
 let count1 = 0, index1 = 0, currentText1 = "", letter1 = "";
@@ -44,7 +44,7 @@ backgroundDivs = Array.from(backgroundDivs);
 let options = {
     root : null,
     threshold : .35,
-    rootMargin : "-60px"
+    rootMargin : "-10px"
 }
 
 let backgroundObserver = new IntersectionObserver(function(entries){

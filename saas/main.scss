@@ -658,7 +658,6 @@ body{
 
 .contact{
     position: relative;
-    height : 85vh;
     #{&}__first{
         text-align: center;
         h1{
@@ -738,6 +737,7 @@ body{
 
         margin-right: 3rem;
         width : 45%;
+        margin-bottom : 1.5rem;
 
         input,textarea{
             width: 100%;
@@ -766,6 +766,12 @@ body{
         }
     }
 }
+
+/* WRITE MEDIA QUERIES FOR CONTACT SECTION */
+@media (max-width : 500px) {@include contactSectionMobileDevices();}
+@media (min-width : 501px) and (max-width : 768px){@include contactSectionTabletDevices();}
+@media (min-width : 769px) and (max-width : 1200px){@include contactSectionDesktopDevices();}
+
 
 /* Now style the section that is above the footer */
 

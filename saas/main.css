@@ -1400,7 +1400,6 @@ body {
 /* Now style the contact form */
 .contact {
   position: relative;
-  height: 85vh;
 }
 
 .contact .contact__first {
@@ -1531,6 +1530,7 @@ body {
 .contact .contact__form {
   margin-right: 3rem;
   width: 45%;
+  margin-bottom: 1.5rem;
 }
 
 .contact .contact__form input, .contact .contact__form textarea {
@@ -1572,6 +1572,99 @@ body {
   margin-bottom: .75rem;
   width: 49.7%;
   height: 3rem;
+}
+
+/* WRITE MEDIA QUERIES FOR CONTACT SECTION */
+@media (max-width: 500px) {
+  .contact .contact__first {
+    text-align: center;
+  }
+  .contact .contact__first h1 {
+    margin-top: 0rem;
+  }
+  .contact .contact__first h3::before {
+    left: 30%;
+  }
+  .contact .contact__first h3::after {
+    right: 30%;
+  }
+  .contact .contact__second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact__mydetails {
+    margin: 0 auto;
+  }
+  .contact .contact__location, .contact .contact__phn, .contact .contact__email {
+    display: -ms-grid;
+    display: grid;
+    margin: .85rem;
+  }
+  .contact .contact__location i, .contact .contact__phn i, .contact .contact__email i {
+    font-size: 1.2rem;
+  }
+  .contact .contact__form {
+    margin-right: 0rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contact .contact__form input, .contact .contact__form textarea {
+    width: 100%;
+    border: 1px solid #c3c3c3;
+  }
+  .contact .contact__link {
+    margin: .5rem 0rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .contact .contact__link {
+    margin: .5rem 0rem;
+  }
+  .contact .contact__first h1 {
+    margin-top: .4rem;
+  }
+  .contact .contact__first h3::before {
+    left: 36.5%;
+  }
+  .contact .contact__first h3::after {
+    right: 36.5%;
+  }
+  .contact .contact__mydetails {
+    margin: 0 auto;
+  }
+  .contact .contact__form {
+    margin-right: 0rem;
+    width: 68%;
+    margin: 0 auto;
+  }
+  .contact .contact__form input, .contact .contact__form textarea {
+    width: 100%;
+    border: 1px solid #c3c3c3;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .contact .contact__link {
+    margin: .5rem 0rem;
+  }
+  .contact .contact__form input, .contact .contact__form textarea {
+    width: 100%;
+  }
+  .contact .contact__first h1 {
+    margin-top: .4rem;
+  }
+  .contact .contact__first h3::before {
+    left: 39.5%;
+  }
+  .contact .contact__first h3::after {
+    right: 39.5%;
+  }
 }
 
 /* Now style the section that is above the footer */

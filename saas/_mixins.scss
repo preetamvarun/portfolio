@@ -434,3 +434,105 @@
         }
     }
 }
+
+@mixin contactSectionMobileDevices(){
+    .contact{
+        #{&}__first{
+            text-align: center;
+            h1{
+                margin-top : 0rem;
+            }
+            h3::before{
+                left : 30%;
+            }
+            h3::after{
+                right : 30%;
+            }
+        }
+        #{&}__second{
+            display: flex;
+            flex-direction: column;
+        }
+        #{&}__mydetails{
+            margin : 0 auto;
+        }    
+        #{&}__location, #{&}__phn, #{&}__email{
+            display: grid;
+            margin : .85rem;
+            i{
+                font-size: 1.2rem;
+            }
+        }
+        #{&}__form{
+            margin-right: 0rem;
+            width : 90%; // 
+            margin : 0 auto; // 
+    
+            input,textarea{
+                width: 100%;
+                border: 1px solid #c3c3c3;
+            }
+    
+        }
+        #{&}__link{
+            margin : .5rem 0rem;
+        }
+    
+    }
+}
+
+@mixin contactSectionTabletDevices(){
+    .contact{
+        #{&}__link{
+            margin : .5rem 0rem;
+        }
+        #{&}__first{
+            h1{
+                margin-top : .4rem;
+            }
+            h3::before{
+                left : 36.5%;
+            }
+            h3::after{
+                right : 36.5%;
+            }
+        }
+        #{&}__mydetails{
+            margin : 0 auto;
+        }    
+        #{&}__form{
+            margin-right: 0rem;
+            width : 68%;
+            margin : 0 auto; 
+            input,textarea{
+                width: 100%;
+                border: 1px solid #c3c3c3;
+            }
+        }
+    }
+}
+
+@mixin contactSectionDesktopDevices(){
+    .contact{
+        #{&}__link{
+            margin : .5rem 0rem;
+        }
+        #{&}__form{
+            input,textarea{
+                width : 100%;
+            }
+        }
+        #{&}__first{
+            h1{
+                margin-top : .4rem;
+            }
+            h3::before{
+                left : 39.5%;
+            }
+            h3::after{
+                right : 39.5%;
+            }
+        }
+    }
+}
+
