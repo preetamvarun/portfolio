@@ -8,9 +8,9 @@
     box-sizing : border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+// html{
+//     scroll-behavior: smooth;
+// }
 
 body{
     font-family: $font-family;
@@ -64,7 +64,7 @@ body{
     #{&}__intro{
         color : white;
         padding : 10.5rem 0rem 10.5rem 3rem;
-        z-index: 2;
+        z-index: 0;
         position: relative;
     }
 
@@ -142,21 +142,6 @@ body{
 
 }
 
-.nav::after{
-    position: absolute;
-    content : '';
-    background-color: rgba(0,0,0,.4);
-    top : 0;
-    left : 0;
-    bottom : 0;
-    right : 0;
-}
-
-// style nav intro paragraph field
-
-
-
-
 #download{
     text-decoration : none;
     color : $white;
@@ -184,6 +169,39 @@ body{
 
 #download:hover::after, #download:hover::before{
     transform: scaleX(0.6);
+}
+
+@media (max-width : 768px){
+    @include hamburgerMixin(block);
+    .nav{
+        #{&}__intro{
+            padding : 11rem 0rem 11rem .5rem;
+        }
+        #{&}__fixed{
+            display: none;
+        }
+    }
+}
+
+
+@media(max-width : 500px){
+    .nav{
+        #{&}__intro{
+            padding : 11rem 0rem 11rem .5rem;
+        }
+        #{&}__fixed{
+            display: none;
+        }
+    }
+    #intro{
+        font-size: 1.2rem;
+    }
+    #name{
+        font-size : 2.2rem;
+    }
+    #skill{
+        font-size : 1.6rem;
+    }
 }
 
 

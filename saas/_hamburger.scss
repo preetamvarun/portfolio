@@ -3,7 +3,6 @@
     .menuWrap{
         position: fixed;
         z-index : 1;
-        position: absolute;
         left : 0;
         top : 0;
         display: $display;
@@ -13,7 +12,7 @@
         position: absolute;
         top : 10px;
         right : 10px;
-        z-index: 1;
+        z-index: 2;
         width : 40px;
         height : 40px;
         padding : .5rem;
@@ -37,7 +36,6 @@
         background: inherit;
         height : 2px;
         width : 100%;
-        background: inherit;
         z-index : 1;
     }
 
@@ -52,9 +50,9 @@
 
     .toggler{
         position: absolute;
-        top : 0;
-        right : 0;
-        z-index : 2; 
+        top : 10px;
+        right : 10px;
+        z-index : 3; 
         cursor: pointer;
         width : 40px;
         height : 40px;
@@ -101,7 +99,7 @@
     }
 
     .menuWrap .toggler:checked ~ .menu > div {
-        transform: scale(1.5);
+        transform: scale(1.8);
     }
 
     .menuWrap .menu > div > div{
