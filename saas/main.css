@@ -1220,6 +1220,13 @@ body {
     right: 25%;
   }
   .skills .skills__second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 2rem;
   }
   .skills .skills__second h3 {
@@ -1236,6 +1243,15 @@ body {
   }
   .skills .skills__first h3::after {
     right: 34%;
+  }
+  .skills .skills__second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1506,7 +1522,7 @@ body {
     width: calc(100vw - 90px);
   }
   .background .background__second li:nth-child(even) div {
-    left: 40px;
+    left: 35px;
   }
   .background .background__second li:nth-child(even) div::before {
     left: -15px;
