@@ -748,7 +748,7 @@ body{
         ul{
             max-width : 25%;
             margin : 0 auto;
-            @include flex(row,space-evenly,center);
+            @include flex(row,center,center);
             padding-bottom : 1rem;
         }
         ul li{
@@ -759,6 +759,7 @@ body{
                 color : white;
                 padding : .7rem;
                 border-radius: 50%;
+                margin : .5rem;
                 transition: color .35s ease-in-out;
             }
             a i:hover{

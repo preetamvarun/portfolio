@@ -1863,9 +1863,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1882,6 +1882,7 @@ body {
   color: white;
   padding: .7rem;
   border-radius: 50%;
+  margin: .5rem;
   -webkit-transition: color .35s ease-in-out;
   transition: color .35s ease-in-out;
 }
