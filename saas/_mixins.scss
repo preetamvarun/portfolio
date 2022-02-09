@@ -487,3 +487,10 @@
         }
     }
 }
+
+@mixin footerSectionDesktopMode(){
+    .footer p{
+        font-size: .9rem;
+        padding : 1.4rem;
+    }
+}
