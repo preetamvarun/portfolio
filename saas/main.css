@@ -515,6 +515,24 @@ body {
 }
 
 /* MEDIA QUERIES FOR ENTIRE NAVIGATION TAG */
+@media (max-width: 500px) {
+  .nav .nav__intro {
+    padding: 11rem 0rem 11rem .5rem;
+  }
+  .nav .nav__fixed {
+    display: none;
+  }
+  #intro {
+    font-size: 1.2rem;
+  }
+  #name {
+    font-size: 2.2rem;
+  }
+  #skill {
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 900px) {
   .menuWrap {
     position: fixed;
@@ -702,21 +720,9 @@ body {
   }
 }
 
-@media (max-width: 500px) {
-  .nav .nav__intro {
-    padding: 11rem 0rem 11rem .5rem;
-  }
-  .nav .nav__fixed {
+@media (max-width: 1200px) {
+  .nav .nav__navigator {
     display: none;
-  }
-  #intro {
-    font-size: 1.2rem;
-  }
-  #name {
-    font-size: 2.2rem;
-  }
-  #skill {
-    font-size: 1.6rem;
   }
 }
 
@@ -885,9 +891,7 @@ body {
 
 @media (max-width: 500px) {
   .about .about__navigator {
-    bottom: 15px;
-    height: 45px;
-    width: 25px;
+    display: none;
   }
   .about .about__first {
     padding-top: .5rem;
@@ -950,8 +954,7 @@ body {
 
 @media (min-width: 501px) and (max-width: 768px) {
   .about .about__navigator {
-    left: 40%;
-    bottom: 25px;
+    display: none;
   }
   .about .about__first {
     padding-top: 2rem;
@@ -1115,6 +1118,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .projects .projects__ml, .projects .projects__blogspot, .projects .projects__shoppinglist {
@@ -1185,6 +1189,9 @@ body {
   .projects {
     overflow-x: hidden;
   }
+  .projects .projects__navigator {
+    display: none;
+  }
   .projects .projects__first h1 {
     padding: 0rem;
   }
@@ -1214,6 +1221,9 @@ body {
   .projects {
     overflow-x: hidden;
   }
+  .projects .projects__navigator {
+    display: none;
+  }
   .projects .projects__first h1 {
     padding: 0rem;
   }
@@ -1240,6 +1250,9 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  .projects .projects__navigator {
+    display: none;
+  }
   .projects .projects__first h1 {
     padding: 0rem;
   }
@@ -1337,7 +1350,7 @@ body {
 /* SKILLS SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
 @media (max-width: 500px) {
   .skills .skills__navigator {
-    bottom: 10px;
+    display: none;
   }
   .skills .skills__second {
     display: -webkit-box;
@@ -1358,6 +1371,9 @@ body {
 }
 
 @media (min-width: 501px) and (max-width: 1200px) {
+  .skills .skills__navigator {
+    display: none;
+  }
   .skills .skills__second {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1551,6 +1567,9 @@ body {
 
 /* WRITE MEDIA QUERIES FOR BACKGROUND SECTION */
 @media (min-width: 541px) and (max-width: 768px) {
+  .background .background__navigator {
+    display: none;
+  }
   .background .background__second li div {
     width: 310px;
   }
@@ -1560,6 +1579,9 @@ body {
 }
 
 @media (min-width: 501px) and (max-width: 540px) {
+  .background .background__navigator {
+    display: none;
+  }
   .background .background__second li div {
     width: 210px;
   }
@@ -1569,6 +1591,9 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  .background .background__navigator {
+    display: none;
+  }
   .background .background__second li div {
     width: 320px;
   }
@@ -1578,6 +1603,9 @@ body {
 }
 
 @media (max-width: 500px) {
+  .background .background__navigator {
+    display: none;
+  }
   .background .background__second li {
     margin-left: 1rem;
   }
@@ -1755,6 +1783,9 @@ body {
 
 /* WRITE MEDIA QUERIES FOR CONTACT SECTION */
 @media (max-width: 500px) {
+  .contact .contact__navigator {
+    display: none;
+  }
   .contact .contact__first {
     text-align: center;
   }
@@ -1796,6 +1827,9 @@ body {
 }
 
 @media (min-width: 501px) and (max-width: 768px) {
+  .contact .contact__navigator {
+    display: none;
+  }
   .contact .contact__link {
     margin: .5rem 0rem;
   }
@@ -1817,6 +1851,9 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  .contact .contact__navigator {
+    display: none;
+  }
   .contact .contact__link {
     margin: .5rem 0rem;
   }

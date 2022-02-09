@@ -62,9 +62,47 @@
 
 /* MEDIA QUERY MIXINS */
 
+@mixin navSectionMobiles(){
+    .nav{
+        #{&}__intro{
+            padding : 11rem 0rem 11rem .5rem;
+        }
+        #{&}__fixed{
+            display: none;
+        }
+    }
+    #intro{
+        font-size: 1.2rem;
+    }
+    #name{
+        font-size : 2.2rem;
+    }
+    #skill{
+        font-size : 1.6rem;
+    }
+}
+
+@mixin navSectionTabletsAndSomeDesktopDevices(){
+    @include hamburgerMixin(block);
+    .nav{
+        #{&}__intro{
+            padding : 11rem 0rem 11rem .5rem;
+        }
+        #{&}__fixed{
+            display: none;
+        }
+    }
+}
+
+@mixin navSectionesktopDevices(){
+    .nav{
+        #{&}__navigator {display: none;}
+    }
+}
+
 @mixin aboutSectionTablets(){
     .about{
-        #{&}__navigator {left : 40%; bottom : 25px;}
+        #{&}__navigator {display: none;}
         #{&}__first{
             padding-top : 2rem;
             h2::before {left : 36%;}
@@ -86,11 +124,7 @@
 
 @mixin aboutSectionMobileDevices() {
     .about{
-        #{&}__navigator{
-            bottom : 15px;
-            height : 45px;
-            width : 25px;
-        }
+        #{&}__navigator {display: none;}
         #{&}__first{
             padding-top : .5rem;
             h2{
@@ -195,6 +229,7 @@
 @mixin projectsSectionMobileDevices(){
     .projects{
         overflow-x: hidden;
+        #{&}__navigator {display: none;}
         #{&}__first{
             h1{
                 padding : 0rem;
@@ -214,6 +249,7 @@
 @mixin projectsSectionTabletDevices(){
     .projects{
         overflow-x: hidden;
+        #{&}__navigator {display: none;}
         #{&}__first{
             h1{
                 padding : 0rem;
@@ -232,6 +268,7 @@
 
 @mixin projectsSectionDesktopDevices(){
     .projects{
+        #{&}__navigator {display: none;}
         #{&}__first{
             h1{
                 padding : 0rem;
@@ -247,9 +284,7 @@
 
 @mixin skillsSectionMobileDevices(){
     .skills{
-        #{&}__navigator{
-            bottom: 10px;
-        }
+        #{&}__navigator {display: none;}
         #{&}__second{
             display: flex;
             flex-direction: column;
@@ -262,6 +297,7 @@
 
 @mixin skillsSectionTabletAndDesktopDevices(){
     .skills{
+        #{&}__navigator {display: none;}
         #{&}__second{
             display: flex;
             flex-direction: column;
@@ -272,6 +308,7 @@
 
 @mixin backgroundSectionTabletDevices(){
     .background{
+        #{&}__navigator {display: none;}
         #{&}__second{
             li div{
                 width : 310px;
@@ -285,6 +322,7 @@
 
 @mixin backgroundSectionTabletDevices1(){
     .background{
+        #{&}__navigator {display: none;}
         #{&}__second{
             li div{
                 width : 210px;
@@ -298,6 +336,7 @@
 
 @mixin backgroundSectionDesktopDevices(){
     .background{
+        #{&}__navigator {display: none;}
         #{&}__second{
             li div{
                 width : 320px;
@@ -311,6 +350,7 @@
 
 @mixin backgroundSectionMobileDevices(){
     .background{
+        #{&}__navigator {display: none;}
         #{&}__second{
             li{
                 margin-left : 1rem;
@@ -332,6 +372,7 @@
 
 @mixin contactSectionMobileDevices(){
     .contact{
+        #{&}__navigator {display: none;}
         #{&}__first{
             text-align: center;
             h1{
@@ -372,6 +413,7 @@
 
 @mixin contactSectionTabletDevices(){
     .contact{
+        #{&}__navigator {display: none;}
         #{&}__link{
             margin : .5rem 0rem;
         }
@@ -397,6 +439,7 @@
 
 @mixin contactSectionDesktopDevices(){
     .contact{
+        #{&}__navigator {display: none;}
         #{&}__link{
             margin : .5rem 0rem;
         }
