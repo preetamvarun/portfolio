@@ -277,7 +277,7 @@ body{
     }
 }
 
-#linkedIn{
+#leetCode{
     display: inline-block;
     text-decoration: none;
     color : $white;
@@ -288,13 +288,13 @@ body{
     z-index: 0;
 }
 
-#linkedIn::before{
+#leetCode::before{
     @include shutterbtn();
     transform : scaleY(0);
     transform-origin: top;
 }
 
-#linkedIn:hover::before{
+#leetCode:hover::before{
     transform : scaleY(1);
 }
 

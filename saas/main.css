@@ -827,7 +827,7 @@ body {
   font-weight: 700px;
 }
 
-#linkedIn {
+#leetCode {
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -838,7 +838,7 @@ body {
   z-index: 0;
 }
 
-#linkedIn::before {
+#leetCode::before {
   position: absolute;
   content: '';
   top: 0;
@@ -856,7 +856,7 @@ body {
           transform-origin: top;
 }
 
-#linkedIn:hover::before {
+#leetCode:hover::before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
