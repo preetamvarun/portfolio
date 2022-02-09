@@ -261,7 +261,7 @@
     }
 }
 
-@mixin skillsSectionTabletDevices(){
+@mixin skillsSectionTabletAndDesktopDevices(){
     .skills{
         #{&}__second{
             display: flex;

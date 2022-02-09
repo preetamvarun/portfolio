@@ -449,7 +449,7 @@ body{
 
 /* SKILLS SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
 @media (max-width : 500px) {@include skillsSectionMobileDevices();}
-@media (min-width : 501px) and (max-width : 768px) {@include skillsSectionTabletDevices();} 
+@media (min-width : 501px) and (max-width : 1200px) {@include skillsSectionTabletAndDesktopDevices();} 
 
 
 
