@@ -61,3 +61,9 @@ open index.html with a browser you prefer
 User friendly 🔥 <br>
 clean UI   ☘️ <br>
 Responsive 💙
+
+<a name = "contactMe"> </a>
+## 7. Contact Me 📞
+
+- Gmail: [preetamvarun](mailto:preetamvarun99@gmail.com) 📧
+- Github: [preetamvarun](https://github.com/preetamvarun) 
