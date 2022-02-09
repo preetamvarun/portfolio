@@ -63,7 +63,8 @@ User friendly 🔥 <br>
 clean UI   ☘️ <br>
 Responsive 💙
 
-<a name = "liveDemo"> </a> ⬇️
+## 7. Live Demo ⬇️
+<a name = "liveDemo"> </a> 
 https://sandy2601-portfolio.netlify.app/
 
 <a name = "contactMe"> </a>
