@@ -1006,8 +1006,7 @@ body {
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .about .about__navigator {
-    left: 56.5%;
-    bottom: 20px;
+    display: none;
   }
   .about .about__first {
     padding-top: 2rem;
