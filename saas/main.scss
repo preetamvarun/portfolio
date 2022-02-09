@@ -61,6 +61,20 @@ body{
     background: url('../images/banner-2.jpg') no-repeat center center/cover;
     position: relative;
 
+    #{&}__navigator{
+        @include navigatorOuterBody(white);
+    }
+    #{&}__navigator::before{
+        @include navigatorArrow(15%);
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    #{&}__navigator::after{
+        @include navigatorArrow(30%);
+        animation: animate 1s .3s ease-in-out infinite;
+    }
+
+
     #{&}__intro{
         color : white;
         padding : 11.5rem 0rem 11.5rem 3rem;
@@ -171,7 +185,9 @@ body{
     transform: scaleX(0.6);
 }
 
-@media (max-width : 768px){
+/* MEDIA QUERIES FOR ENTIRE NAVIGATION TAG */
+
+@media (max-width : 900px){
     @include hamburgerMixin(block);
     .nav{
         #{&}__intro{
@@ -283,7 +299,7 @@ body{
 }
 
 /* ABOUT SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
-@media(max-width : 290px){@include aboutSectionsmallMobileDevices();}
+@media(max-width : 330px){@include aboutSectionsmallMobileDevices();}
 @media(max-width : 500px){@include aboutSectionMobileDevices();}
 @media (min-width : 501px) and (max-width : 768px){@include aboutSectionTablets();}
 @media (min-width : 769px) and (max-width : 1200px){@include aboutSectionDesktopDevices();}

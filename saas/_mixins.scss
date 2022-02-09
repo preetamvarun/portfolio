@@ -35,8 +35,8 @@
 // create a navigator outer body mixin
 
 @mixin navigatorOuterBody($color){
-    height : 50px;
-    width : 30px;
+    height : 45px;
+    width : 25px;
     border : 2px solid $color;
     z-index : 1;
     bottom : 15px;
@@ -138,10 +138,7 @@
 @mixin aboutSectionsmallMobileDevices(){
     .about{
         #{&}__navigator{
-            bottom : 14px;
-            height : 32px;
-            width : 18px;
-            left : 60%;
+            display: none;
         }
         #{&}__flex{
             .third_content{

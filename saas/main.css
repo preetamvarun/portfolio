@@ -1,7 +1,7 @@
 /* MEDIA QUERY MIXINS */
 __navigator {
-  height: 50px;
-  width: 30px;
+  height: 45px;
+  width: 25px;
   border: 2px solid white;
   z-index: 1;
   bottom: 15px;
@@ -302,6 +302,49 @@ body {
   position: relative;
 }
 
+.nav .nav__navigator {
+  height: 45px;
+  width: 25px;
+  border: 2px solid white;
+  z-index: 1;
+  bottom: 15px;
+  left: 50%;
+  position: absolute;
+  border-radius: 50px;
+}
+
+.nav .nav__navigator::before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  border: 2px solid #DC143C;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%) rotate(45deg);
+          transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  -webkit-animation: animate 1s ease-in-out infinite;
+          animation: animate 1s ease-in-out infinite;
+}
+
+.nav .nav__navigator::after {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  border: 2px solid #DC143C;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%) rotate(45deg);
+          transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  -webkit-animation: animate 1s .3s ease-in-out infinite;
+          animation: animate 1s .3s ease-in-out infinite;
+}
+
 .nav .nav__intro {
   color: white;
   padding: 11.5rem 0rem 11.5rem 3rem;
@@ -472,7 +515,8 @@ body {
           transform: scaleX(0.6);
 }
 
-@media (max-width: 768px) {
+/* MEDIA QUERIES FOR ENTIRE NAVIGATION TAG */
+@media (max-width: 900px) {
   .menuWrap {
     position: fixed;
     z-index: 1;
@@ -683,8 +727,8 @@ body {
 }
 
 .about .about__navigator {
-  height: 50px;
-  width: 30px;
+  height: 45px;
+  width: 25px;
   border: 2px solid #000;
   z-index: 1;
   bottom: 15px;
@@ -819,12 +863,9 @@ body {
 }
 
 /* ABOUT SECTION WORKING FINE IN LANDSCAPE AND PORTRAIT MODES */
-@media (max-width: 290px) {
+@media (max-width: 330px) {
   .about .about__navigator {
-    bottom: 14px;
-    height: 32px;
-    width: 18px;
-    left: 60%;
+    display: none;
   }
   .about .about__flex .third_content h2 {
     font-size: .85rem;
@@ -1003,8 +1044,8 @@ body {
 }
 
 .projects .projects__navigator {
-  height: 50px;
-  width: 30px;
+  height: 45px;
+  width: 25px;
   border: 2px solid white;
   z-index: 1;
   bottom: 15px;
@@ -1215,8 +1256,8 @@ body {
 }
 
 .skills .skills__navigator {
-  height: 50px;
-  width: 30px;
+  height: 45px;
+  width: 25px;
   border: 2px solid #000;
   z-index: 1;
   bottom: 15px;
@@ -1336,8 +1377,8 @@ body {
 }
 
 .background .background__navigator {
-  height: 50px;
-  width: 30px;
+  height: 45px;
+  width: 25px;
   border: 2px solid white;
   z-index: 1;
   bottom: 15px;
