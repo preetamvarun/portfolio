@@ -298,7 +298,7 @@ body {
 }
 
 .nav {
-  background: url("../images/banner-3.jpg") no-repeat center center/cover;
+  background: url("../images/banner-4.jpg") no-repeat center center/cover;
   position: relative;
 }
 
@@ -395,7 +395,6 @@ body {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   position: relative;
-  font-size: 1.1rem;
 }
 
 .nav .nav__menu ul li a .dot {
