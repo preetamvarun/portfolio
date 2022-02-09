@@ -23,6 +23,7 @@ The purpose of this project is to understand and implement the SCSS & CSS & JS c
 ## 2. Screenshots :camera_flash:
 <img src = "/portfolioImages/a.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/b.png" alt = "" height = 300 width = 600>
+<img src = "/portfolioImages/c.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/d.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/e.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/f.png" alt = "" height = 300 width = 600>
