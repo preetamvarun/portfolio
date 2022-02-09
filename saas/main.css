@@ -842,8 +842,7 @@ body {
   border-radius: 5px;
   position: relative;
   z-index: 0;
-  margin-left: .5rem;
-  margin-bottom: .5rem;
+  margin: .75rem;
 }
 
 #leetCode::before {
@@ -883,7 +882,7 @@ body {
   .about .about__first h2 {
     font-size: 1rem;
   }
-  #linkedIn {
+  #leetCode {
     margin: 1rem 1.5rem .5rem 1rem;
     padding: .1rem;
   }
@@ -946,8 +945,8 @@ body {
     font-size: 1rem;
     padding: 1rem;
   }
-  #linkedIn {
-    margin: 1rem 1rem .5rem 1rem;
+  #leetCode {
+    margin: .3rem 1rem .5rem 1rem;
     padding: .9rem;
   }
 }
@@ -1003,9 +1002,10 @@ body {
   .about .about__flex .third_content p {
     margin-top: 0rem;
   }
-  .about #linkedIn {
+  .about #leetCode {
     margin: 1rem;
     margin-right: 0rem;
+    margin-top: 0rem;
   }
 }
 
@@ -1034,7 +1034,7 @@ body {
     font-size: 1.1rem;
     padding: 1rem 2rem 0rem 1rem;
   }
-  #linkedIn {
+  #leetCode {
     margin: 1rem;
   }
 }
