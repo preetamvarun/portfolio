@@ -198,8 +198,13 @@
             display: none;
         }
         #{&}__first{
-            padding-top : 2rem;
-            h1{padding : 1rem 0rem;}
+            padding-top : .5rem;
+            h1{
+                font-size: 1.45rem;
+            }
+            h2{
+                font-size: 1.2rem;
+            }
         }
         #{&}__flex{
             margin-top: 1rem;
@@ -223,7 +228,7 @@
     }
     #leetCode{
         margin : 1rem;
-        width : 38%;
+        width : 36%;
     }
 }
 
@@ -272,7 +277,11 @@
         #{&}__navigator {display: none;}
         #{&}__first{
             h1{
+                font-size: 1.45rem;
                 padding : 0rem;
+            }
+            h3{
+                font-size: 1.1rem;
             }
         }
         .mlImg,.pyImg,.angularImg{
@@ -298,10 +307,21 @@
 
 @mixin skillsSectionTabletAndDesktopDevices(){
     .skills{
+        #{&}__first{
+            h1{
+                font-size: 1.45rem;
+            }
+            h3{
+                font-size: 1.1rem;
+            }
+        }
         #{&}__navigator {display: none;}
         #{&}__second{
             display: flex;
             flex-direction: column;
+            h3{
+                font-size: 1.1rem;
+            }
         }
     }
 }
@@ -338,6 +358,14 @@
 @mixin backgroundSectionDesktopDevices(){
     .background{
         #{&}__navigator {display: none;}
+        #{&}__first{
+            h1{
+                font-size: 1.4rem;
+            }
+            h3{
+                font-size: 1.1rem;
+            }
+        }
         #{&}__second{
             li div{
                 width : 320px;
@@ -451,7 +479,10 @@
         }
         #{&}__first{
             h1{
-                margin-top : .4rem;
+                font-size: 1.4rem;
+            }
+            h3{
+                font-size : 1.1rem;
             }
         }
     }
