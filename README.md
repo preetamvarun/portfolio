@@ -30,3 +30,6 @@ The purpose of this project is to understand and implement the SCSS & CSS & JS c
 <img src = "/portfolioImages/g.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/h.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/i.png" alt = "" height = 300 width = 600>
+
+## 3. Preview  :movie_camera:
+preview will be added shortly
