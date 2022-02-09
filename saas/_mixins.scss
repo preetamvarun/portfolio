@@ -32,17 +32,6 @@
     transition: all 0.75s ease-in;
 }
 
-// include horizontal line mixin 
-@mixin horizontaLine($color){
-    position: absolute;
-    content: "";
-    height : 3px;
-    width : 4%;
-    top : 50%;
-    border-radius : 5px;
-    background-color: $color;
-}
-
 // create a navigator outer body mixin
 
 @mixin navigatorOuterBody($color){
@@ -108,15 +97,6 @@
                 color : $webmaincolor;
                 position: relative;
             }
-            h2::before, h2::after{
-                @include horizontaLine($dark);
-            }
-            h2::before{
-                left : 32%;
-            }
-            h2::after{
-                right : 32%;
-            }
         }
         #{&}__flex{
             display: flex;
@@ -173,12 +153,6 @@
             h2{
                 font-size : 1rem;
             }
-            h2::before{
-                left : 0%;
-            }
-            h2::after{
-                right : 0%;
-            }
         }
     }
     #linkedIn{
@@ -196,8 +170,6 @@
         #{&}__first{
             padding-top : 2rem;
             h1{padding : 1rem 0rem;}
-            h2::before{left : 39%;}
-            h2::after {right : 39%;}
         }
         #{&}__flex{
             margin-top: 1rem;
@@ -231,12 +203,6 @@
             h1{
                 padding : 0rem;
             }
-            h3::before{
-                left : 20%;
-            }
-            h3::after{
-                right : 20%;
-            }
         }
         #{&}__second{
             @include flex(column,space-evenly,center);
@@ -256,12 +222,6 @@
             h1{
                 padding : 0rem;
             }
-            h3::before{
-                left : 30%;
-            }
-            h3::after{
-                right : 30%;
-            }
         }
         #{&}__second{
             @include flex(column,space-evenly,center);
@@ -280,12 +240,6 @@
             h1{
                 padding : 0rem;
             }
-            h3::before{
-                left : 35%;
-            }
-            h3::after{
-                right : 35%;
-            }
         }
         .mlImg,.pyImg,.angularImg{
             height : 320px;
@@ -295,31 +249,10 @@
     }
 }
 
-@mixin projectsSectionMobileDevicesInLandscapeMode(){
-    .projects{
-        #{&}__first{
-            h3::before{
-                left : 30%;
-            }
-            h3::after{
-                right : 30%;
-            }
-        }
-    }
-}
-
 @mixin skillsSectionMobileDevices(){
     .skills{
         #{&}__navigator{
             bottom: 10px;
-        }
-        #{&}__first{
-            h3::before{
-                left : 25%;
-            }
-            h3::after {
-                right : 25%;
-            }
         }
         #{&}__second{
             display: flex;
@@ -333,14 +266,6 @@
 
 @mixin skillsSectionTabletDevices(){
     .skills{
-        #{&}__first{
-            h3::before{
-                left : 34%;
-            }
-            h3::after{
-                right : 34%;
-            }
-        }
         #{&}__second{
             display: flex;
             flex-direction: column;
@@ -348,29 +273,9 @@
     }
 }
 
-@mixin skillsSectionDesktopDevices(){
-    .skills{
-        #{&}__first{
-            h3::before{
-                left : 38%;
-            }
-            h3::after{
-                right : 38%;
-            }
-        }
-    }
-}
 
 @mixin backgroundSectionTabletDevices(){
     .background{
-        #{&}__first{
-            h3::before{
-                left : 41%;
-            }
-            h3::after{
-                right : 41%;
-            }
-        }
         #{&}__second{
             li div{
                 width : 310px;
@@ -384,15 +289,6 @@
 
 @mixin backgroundSectionTabletDevices1(){
     .background{
-        #{&}__first{
-            h3::before{
-                left : 38%;
-            }
-            h3::after{
-                right : 38%;
-            }
-        }
-    
         #{&}__second{
             li div{
                 width : 210px;
@@ -406,14 +302,6 @@
 
 @mixin backgroundSectionDesktopDevices(){
     .background{
-        #{&}__first{
-            h3::before{
-                left : 40%;
-            }
-            h3::after{
-                right : 40%;
-            }
-        }
         #{&}__second{
             li div{
                 width : 320px;
@@ -427,14 +315,6 @@
 
 @mixin backgroundSectionMobileDevices(){
     .background{
-        #{&}__first{
-            h3::before{
-                left : 32%;
-            }
-            h3::after{
-                right : 32%;
-            }
-        }
         #{&}__second{
             li{
                 margin-left : 1rem;
@@ -460,12 +340,6 @@
             text-align: center;
             h1{
                 margin-top : 0rem;
-            }
-            h3::before{
-                left : 30%;
-            }
-            h3::after{
-                right : 30%;
             }
         }
         #{&}__second{
@@ -509,12 +383,6 @@
             h1{
                 margin-top : .4rem;
             }
-            h3::before{
-                left : 36.5%;
-            }
-            h3::after{
-                right : 36.5%;
-            }
         }
         #{&}__mydetails{
             margin : 0 auto;
@@ -544,12 +412,6 @@
         #{&}__first{
             h1{
                 margin-top : .4rem;
-            }
-            h3::before{
-                left : 39.5%;
-            }
-            h3::after{
-                right : 39.5%;
             }
         }
     }
