@@ -13,6 +13,7 @@ Consider giving a :star: if you like the project :black_heart:. <br>
 - [Installation](#gettingStarted)
 - [Technologies](#tech)
 - [Features](#features)
+- [LiveDemo](#liveDemo)
 - [Contact Me](#contactMe)
 
 <a name = "generalInfo"> </a>
@@ -62,8 +63,11 @@ User friendly 🔥 <br>
 clean UI   ☘️ <br>
 Responsive 💙
 
+<a name = "liveDemo"> </a> ⬇️
+https://sandy2601-portfolio.netlify.app/
+
 <a name = "contactMe"> </a>
-## 7. Contact Me 📞
+## 8. Contact Me 📞
 
 - Gmail: [preetamvarun](mailto:preetamvarun99@gmail.com) 📧
 - Github: [preetamvarun](https://github.com/preetamvarun) 
