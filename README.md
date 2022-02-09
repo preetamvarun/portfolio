@@ -31,5 +31,22 @@ The purpose of this project is to understand and implement the SCSS & CSS & JS c
 <img src = "/portfolioImages/h.png" alt = "" height = 300 width = 600>
 <img src = "/portfolioImages/i.png" alt = "" height = 300 width = 600>
 
+<a name = "preview"> </a>
 ## 3. Preview  :movie_camera:
 preview will be added shortly
+
+<a name = "gettingStarted"> </a>
+## 4. Installation
+
+#### Clone the repo
+
+```sh
+$ git clone https://github.com/preetamvarun/portfolio.git
+$ cd portfolio/
+$ Install live saas compiler in vs code
+```
+
+#### Run the app
+```sh
+open index.html with a browser you prefer
+```
